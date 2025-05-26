@@ -1,0 +1,25 @@
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}INTRODUCTION}{1}{}%
+\contentsline {chapter}{\numberline {2}Synthèse des contributions pour l’extraction automatique de moments clés dans les vidéos longues}{3}{}%
+\contentsline {section}{\numberline {2.1}Modélisation vidéo-textuelle et multimodale pour la sélection de clips}{3}{}%
+\contentsline {section}{\numberline {2.2}Localisation et segmentation temporelle des moments clés}{5}{}%
+\contentsline {section}{\numberline {2.3}Détection des faits saillants et filtrage du bruit}{6}{}%
+\contentsline {section}{\numberline {2.4}Fusion multimodale et alignement pour une narration cohérente}{6}{}%
+\contentsline {section}{\numberline {2.5}Optimisation des modèles et traitement des vidéos longues}{8}{}%
+\contentsline {section}{\numberline {2.6}Intégration et implications pour le développement de la solution}{9}{}%
+\contentsline {chapter}{\numberline {3}Analyse comparative approfondie et différenciation par rapport aux solutions existantes}{11}{}%
+\contentsline {section}{\numberline {3.1}Introduction et contexte}{11}{}%
+\contentsline {section}{\numberline {3.2}Approches et technologies utilisées par les solutions existantes}{12}{}%
+\contentsline {section}{\numberline {3.3}Avantages et limites des solutions existantes}{13}{}%
+\contentsline {chapter}{\numberline {4}PROBLÉMATIQUE}{15}{}%
+\contentsline {chapter}{\numberline {5}APPROCHE PROPOSÉE, MÉTHODOLOGIE ET ÉCHÉANCIER}{17}{}%
+\contentsline {section}{\numberline {5.1}Élaboration d'une représentation textuelle structurée}{17}{}%
+\contentsline {section}{\numberline {5.2}Utilisation d'un grand modèle de langage pour identifier les segments clés}{18}{}%
+\contentsline {section}{\numberline {5.3}Comparaison des résultats avec des références existantes}{19}{}%
+\contentsline {section}{\numberline {5.4}Processus itératif d'optimisation}{19}{}%
+\contentsline {section}{\numberline {5.5}Échéancier}{20}{}%
+\contentsline {chapter}{\numberline {6}CONCLUSION}{23}{}%
+\contentsline {chapter}{LISTE DES RÉFÉRENCES}{25}{}%
