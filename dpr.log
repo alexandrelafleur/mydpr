@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  15 MAY 2025 15:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  18 JUN 2025 14:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -381,6 +381,9 @@ Overfull \hbox (335.91405pt too wide) in paragraph at lines 2--14
 ]
 CHAPITRE 1.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [1
 
@@ -448,13 +451,6 @@ Package fancyhdr Warning: \headheight is too small (25.6073pt):
 
 [8]
 
-
-Package fancyhdr Warning: \headheight is too small (25.6073pt): 
-(fancyhdr)                Make it at least 29.11858pt, for example:
-(fancyhdr)                \setlength{\headheight}{29.11858pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.51128pt}.
-
 [9]
 
 
@@ -486,7 +482,7 @@ Package fancyhdr Warning: \headheight is too small (25.6073pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.50739pt}.
 
 [12]
-Overfull \hbox (1.76472pt too wide) in paragraph at lines 155--156
+Overfull \hbox (1.76472pt too wide) in paragraph at lines 144--145
 []\T1/cmr/m/n/12 Les pla-te-formes d'édi-tion vi-déo au-to-ma-ti-sée telles que Des-cript [[]], Cap-tions.ai [[]], 2short.ai
  []
 
@@ -515,7 +511,7 @@ Underfull \vbox (badness 1776) has occurred while \output is active []
 [16]
 CHAPITRE 5.
 
-Overfull \hbox (5.53864pt too wide) in paragraph at lines 191--191
+Overfull \hbox (5.53864pt too wide) in paragraph at lines 180--180
 []\T1/cmss/bx/n/20.74 APPROCHE PRO-PO-SÉE, MÉ-THO-DO-LO-GIE
  []
 
@@ -532,7 +528,7 @@ Underfull \vbox (badness 2326) has occurred while \output is active []
 
 
 [18]
-Overfull \hbox (2.51274pt too wide) in paragraph at lines 215--215
+Overfull \hbox (2.51274pt too wide) in paragraph at lines 204--204
 []\T1/cmss/bx/n/17.28 Comparaison des ré-sul-tats avec des ré-fé-rences exis-
  []
 
@@ -542,14 +538,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 231--235
+Underfull \hbox (badness 10000) in paragraph at lines 220--224
 
  []
 
 <gantt.png, id=110, 685.56125pt x 552.0625pt>
 File: gantt.png Graphic file (type png)
 <use gantt.png>
-Package pdftex.def Info: gantt.png  used on input line 239.
+Package pdftex.def Info: gantt.png  used on input line 228.
 (pdftex.def)             Requested size: 457.80487pt x 368.66692pt.
 
 
@@ -590,13 +586,13 @@ L3 programming layer <2025-01-18>
 Here is how much of TeX's memory you used:
  7515 strings out of 473190
  136007 string characters out of 5715801
- 544760 words of memory out of 5000000
+ 544758 words of memory out of 5000000
  30662 multiletter control sequences out of 15000+600000
  571713 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,12n,84p,1657b,486s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm2488.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on dpr.pdf (40 pages, 324127 bytes).
+Output written on dpr.pdf (40 pages, 322579 bytes).
 PDF statistics:
  189 PDF objects out of 1000 (max. 8388607)
  123 compressed objects within 2 object streams

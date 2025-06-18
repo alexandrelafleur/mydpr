@@ -9,7 +9,6 @@
 \contentsline {section}{\numberline {2.3}Détection des faits saillants et filtrage du bruit}{6}{}%
 \contentsline {section}{\numberline {2.4}Fusion multimodale et alignement pour une narration cohérente}{6}{}%
 \contentsline {section}{\numberline {2.5}Optimisation des modèles et traitement des vidéos longues}{8}{}%
-\contentsline {section}{\numberline {2.6}Intégration et implications pour le développement de la solution}{9}{}%
 \contentsline {chapter}{\numberline {3}Analyse comparative approfondie et différenciation par rapport aux solutions existantes}{11}{}%
 \contentsline {section}{\numberline {3.1}Introduction et contexte}{11}{}%
 \contentsline {section}{\numberline {3.2}Approches et technologies utilisées par les solutions existantes}{12}{}%

@@ -9,21 +9,17 @@
 \bibitem{radford2023_whisper}
 T.~Xu G. Brockman C. McLeavey I.~Sutskever A.~Radford, J.~Kim.
 \newblock Whipser: Robust speech recognition via large-scale weak supervision.
-\newblock In {\em Proceedings of the 40th International Conference on Machine
-  Learning}, pages 28492--28518, 2023.
+\newblock In {\em Proceedings of the International Conference on Machine Learning}, pages 28492--28518, 2023.
 
 \bibitem{huang2024_vtimellm}
 H.~Chen Z. Song W.~Zhu B.~Huang, X.~Wang.
 \newblock Vtime{LLM}: Empower {LLM} to grasp video moments.
-\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and
-  Pattern Recognition}, pages 14271--14280, 2024.
+\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 14271--14280, 2024.
 
 \bibitem{zhang2019_memory}
 W.~Li C. Fang G. Lin R. Yang D.~Thalmann C.~Fan, X.~Zhu.
-\newblock Heterogeneous memory enhanced multimodal attention model for video
-  question answering.
-\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and
-  Pattern Recognition}, pages 1999--2007, 2019.
+\newblock Heterogeneous memory enhanced multimodal attention model for video question answering.
+\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 1999--2007, 2019.
 
 \bibitem{zhang2023}
 M.~M. Islam Z. Wang S. Yu M. Bansal G.~Bertasius C.~Zhang, T.~Lu.
@@ -31,18 +27,14 @@ M.~M. Islam Z. Wang S. Yu M. Bansal G.~Bertasius C.~Zhang, T.~Lu.
 \newblock {\em arXiv preprint}, arXiv:2312.17235, 2023.
 
 \bibitem{zhou2023lima}
-P.~Xu S. Iyer J. Sun Y. Mao X. Ma A. Efrat P. Yu L. Yu S. Zhang G. Ghosh M.
-  Lewis L. Zettlemoyer O.~Levy C.~Zhou, P.~Liu.
+P.~Xu S. Iyer J. Sun Y. Mao X. Ma A. Efrat P. Yu L. Yu S. Zhang G. Ghosh M. Lewis L. Zettlemoyer O.~Levy C.~Zhou, P.~Liu.
 \newblock Lima: Less is more for alignment.
-\newblock In {\em Proceedings of the International Conference on Neural
-  Information Processing Systems}, volume~36, pages 55006--55021. Neural
-  Information Processing Systems, 2023.
+\newblock In {\em Proceedings of the International Conference on Neural Information Processing Systems}, volume~36, pages 55006--55021. Neural Information Processing Systems, 2023.
 
 \bibitem{captions2024}
 Captions.
 \newblock Captions tool.
-\newblock [En ligne]. Disponible:
-  https://www.captions.ai/tools/ai-clip-generator.
+\newblock [En ligne]. Disponible: https://www.captions.ai/tools/ai-clip-generator.
 \newblock Consulté le 2024-11-04.
 
 \bibitem{han2024_clip}
@@ -58,10 +50,8 @@ Descript.
 
 \bibitem{heilbron2015_activitynet}
 B.~Ghanem J.~Niebles F.~Heilbron, V.~Escorcia.
-\newblock Activitynet: A large-scale video benchmark for human activity
-  understanding.
-\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
-  Pattern Recognition}, pages 961--970, 2015.
+\newblock Activitynet: A large-scale video benchmark for human activity understanding.
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition}, pages 961--970, 2015.
 
 \bibitem{framedrop2024}
 FrameDrop.
@@ -70,8 +60,7 @@ FrameDrop.
 \newblock Consulté le 2024-11-04.
 
 \bibitem{chen2023}
-J.~Wang J. Xu Y. Huang J. Pan Y. Wang Y. Wang Y. Qiao T. Lu L.~Wang G.~Chen,
-  Y.-D.~Zheng.
+J.~Wang J. Xu Y. Huang J. Pan Y. Wang Y. Wang Y. Qiao T. Lu L.~Wang G.~Chen, Y.-D.~Zheng.
 \newblock Video{LLM}: Modeling video sequence with large language models.
 \newblock {\em arXiv preprint}, arXiv:2305.13292, 2023.
 
@@ -82,26 +71,18 @@ Z.~Gan X. Du B. Zhang Z. Wang L. Cao S.-F. Chang Y.~Yang H.~You, H.~Zhang.
 
 \bibitem{anonymous2023_videollama}
 L.~Bing H.~Zhang, X.~Li.
-\newblock Video-llama: An instruction-tuned audio-visual language model for
-  video understanding.
-\newblock In {\em Proceedings of the Conference on Empirical Methods in Natural
-  Language Processing: System Demonstrations}, pages 543--553. Association for
-  Computational Linguistics, 2023.
+\newblock Video-llama: An instruction-tuned audio-visual language model for video understanding.
+\newblock In {\em Proceedings of the Conference on Empirical Methods in Natural Language Processing: System Demonstrations}, pages 543--553. Association for Computational Linguistics, 2023.
 
 \bibitem{lei2021_clipbert}
 L.~Zhou Z. Gan T. L. Berg M. Bansal J.~Liu J.~Lei, L.~Li.
-\newblock Less is more: {CLIPBERT} for video-and-language learning via sparse
-  sampling.
-\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and
-  Pattern Recognition}, pages 7327--7337, 2021.
+\newblock Less is more: {CLIPBERT} for video-and-language learning via sparse sampling.
+\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 7327--7337, 2021.
 
 \bibitem{lei2021_moments}
 M.~Bansal J.~Lei, T. L.~Berg.
-\newblock Qvhighlights: Detecting moments and highlights in videos via natural
-  language queries.
-\newblock In {\em Proceedings of the International Conference on Neural
-  Information Processing Systems}, pages 11846--11858. Neural Information
-  Processing Systems, 2021.
+\newblock Qvhighlights: Detecting moments and highlights in videos via natural language queries.
+\newblock In {\em Proceedings of the International Conference on Neural Information Processing Systems}, pages 11846--11858. Neural Information Processing Systems, 2021.
 
 \bibitem{xu2024}
 W.~Xie X. Chen Y.~Lu J.~Xu, C.~Lan.
@@ -111,8 +92,7 @@ W.~Xie X. Chen Y.~Lu J.~Xu, C.~Lan.
 \bibitem{zhang2016_lstm}
 F.~Sha K.~Grauman K.~Zhang, W.-L.~Chao.
 \newblock Video summarization with long short-term memory.
-\newblock In {\em Proceedings of the European Conference on Computer Vision},
-  pages 766--782. Springer, 2016.
+\newblock In {\em Proceedings of the European Conference on Computer Vision}, pages 766--782. Springer, 2016.
 
 \bibitem{klap2024}
 Klap.
@@ -123,8 +103,7 @@ Klap.
 \bibitem{anonymous2017_localizing}
 E.~Shechtman J. Sivic T. Darrell B.~Russell L.~A.~Hendricks, O.~Wang.
 \newblock Localizing moments in video with natural language.
-\newblock In {\em Proceedings of the IEEE International Conference on Computer
-  Vision}, pages 5804--5813, 2017.
+\newblock In {\em Proceedings of the IEEE International Conference on Computer Vision}, pages 5804--5813, 2017.
 
 \bibitem{bain2022}
 G.~Varol A.~Zisserman M.~Bain, A.~Nagrani.
@@ -152,8 +131,7 @@ Powder.
 \bibitem{prabhu2017_retrieval}
 M.~Rohrbach J. Feng K. Saenko T.~Darrell R.~Hu, H.~Xu.
 \newblock Natural language object retrieval.
-\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
-  Pattern Recognition}, pages 4555--4564, 2016.
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition}, pages 4555--4564, 2016.
 
 \bibitem{anonymous2023_valley}
 M.~Yang J. Dong D. Li P. Lu T. Wang L. Hu M. Qiu Z.~Wei R.~Luo, Z.~Zhao.
@@ -162,12 +140,8 @@ M.~Yang J. Dong D. Li P. Lu T. Wang L. Hu M. Qiu Z.~Wei R.~Luo, Z.~Zhao.
 
 \bibitem{ghosh2019_excl}
 Z.~Parekh A.~Hauptmann S.~Ghosh, A.~Agarwal.
-\newblock Excl: Extractive clip localization using natural language
-  descriptions.
-\newblock In {\em Proceedings of the Conference of the North American Chapter
-  of the Association for Computational Linguistics: Human Language
-  Technologies, Volume 1}, pages 1984--1990. Association for Computational
-  Linguistics, 2019.
+\newblock Excl: Extractive clip localization using natural language descriptions.
+\newblock In {\em Proceedings of the Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1}, pages 1984--1990. Association for Computational Linguistics, 2019.
 
 \bibitem{munasinghe2023_pgvideo}
 M.~Maaz H. A. Rasheed S. Khan M. Shah F.~Khan S.~Munasinghe, R.~Thushara.
@@ -176,10 +150,8 @@ M.~Maaz H. A. Rasheed S. Khan M. Shah F.~Khan S.~Munasinghe, R.~Thushara.
 
 \bibitem{zhang2020_temporal}
 J.~Fu J.~Luo S.~Zhang, H.~Peng.
-\newblock Learning 2d temporal adjacent networks for moment localization with
-  natural language.
-\newblock In {\em Proceedings of the AAAI Conference on Artificial
-  Intelligence}, pages 12870--12877, 2020.
+\newblock Learning 2d temporal adjacent networks for moment localization with natural language.
+\newblock In {\em Proceedings of the AAAI Conference on Artificial Intelligence}, pages 12870--12877, 2020.
 
 \bibitem{sendshort2024}
 SendShort.
@@ -200,11 +172,9 @@ Recast Studio.
 \newblock Consulté le 2024-11-04.
 
 \bibitem{lin2014_coco}
-S.~Belongie J. Hays P. Perona D. Ramanan P. Dollár C.~Zitnick T.~Lin,
-  M.~Maire.
+S.~Belongie J. Hays P. Perona D. Ramanan P. Dollár C.~Zitnick T.~Lin, M.~Maire.
 \newblock Microsoft coco: Common objects in context.
-\newblock In {\em Proceedings of the European Conference on Computer Vision},
-  pages 740--755. Springer International Publishing, 2014.
+\newblock In {\em Proceedings of the European Conference on Computer Vision}, pages 740--755. Springer International Publishing, 2014.
 
 \bibitem{feng2023}
 H.~Chen Z. Zhang Z. Song Y. Zhou W.~Zhu W.~Feng, X.~Wang.
@@ -213,23 +183,18 @@ H.~Chen Z. Zhang Z. Song Y. Zhou W.~Zhu W.~Feng, X.~Wang.
 
 \bibitem{guo2024_vtgllm}
 M.~Li X. Tang X. Chen B.~Zhao Y.~Guo, J.~Liu.
-\newblock Vtg-{LLM}: Integrating timestamp knowledge into video {LLM}s for
-  enhanced video temporal grounding.
+\newblock Vtg-{LLM}: Integrating timestamp knowledge into video {LLM}s for enhanced video temporal grounding.
 \newblock {\em arXiv preprint arXiv:2405.13382}, 2024.
 
 \bibitem{liu2022_umt}
 Y.~Wu C. W. Chen Y. Shan X.~Qie Y.~Liu, S.~Li.
-\newblock Umt: Unified multi-modal transformers for joint video moment
-  retrieval and highlight detection.
-\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and
-  Pattern Recognition}, pages 3032--3041, 2022.
+\newblock Umt: Unified multi-modal transformers for joint video moment retrieval and highlight detection.
+\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 3032--3041, 2022.
 
 \bibitem{sun2023_gptsee}
 Z.~Xie Y. Shu S.~Du Y.~Sun, Y.~Xu.
-\newblock Gptsee: Enhancing moment retrieval and highlight detection via
-  description-based similarity features.
-\newblock In {\em Proceedings of the IEEE Signal Processing Letters}, pages
-  521--525, 2024.
+\newblock Gptsee: Enhancing moment retrieval and highlight detection via description-based similarity features.
+\newblock In {\em Proceedings of the IEEE Signal Processing Letters}, pages 521--525, 2024.
 
 \bibitem{tian2025yolov12}
 D.~Doermann Y.~Tian, Q.~Ye.
@@ -243,10 +208,8 @@ J.~Liang Y. Wang Q. Liu D.~Zhao Y.~Wang, X.~Meng.
 
 \bibitem{weng2024}
 H.~He X. Chang B.~Zhuang Y.~Weng, M.~Han.
-\newblock Longvlm: Efficient long video understanding via large language
-  models.
-\newblock In {\em Proceedings of the European Conference on Computer Vision},
-  2024.
+\newblock Longvlm: Efficient long video understanding via large language models.
+\newblock In {\em Proceedings of the European Conference on Computer Vision}, 2024.
 
 \bibitem{anonymous2023_bubogpt}
 D.~Zhou Z. Huang J. Feng B.~Kang Y.~Zhao, Z.~Lin.

@@ -28,7 +28,7 @@
 
 \TitreFrancais{DÉTECTION DES MOMENTS SAILLANTS D'UNE VIDÉO EN UTILISANT UNE REPRÉSENTATION TEXTUELLE}
 \Auteur{Alexandre}{LAFLEUR}
-\Date{Avril}{2025}
+\Date{Mai}{2025}
 \MotsClesFrancais{Intelligence artificielle, résumé vidéo, LLM}
 
 \Directeur{François}{GRONDIN}
@@ -39,7 +39,7 @@
 
 \chapter{INTRODUCTION}
 
-Le développement grandissant de systèmes robotiques autonomes, comme les drones, les bases mobiles et les véhicules autonomes, demande des capacités d'analyse vidéo de plus en plus performantes. Les flux vidéo continus captés par ces plateformes représentent une source considérable de données, dont l'exploitation,  en temps réel ou même en différé, constitue un défi majeur. Principalement dû à des contraintes inhérentes aux systèmes embarqués, comme leur puissance de calcul limitée, leur autonomie énergétique restreinte et leur capacité de stockage souvent réduite. En conséquence, les méthodes traditionnelles d'analyse multimodale, qui combinent à la fois le traitement d'images et le traitement de l’audio, demeurent difficilement applicables sur des dispositifs robotisés contraints en ressources.
+Le développement grandissant de systèmes robotiques autonomes, comme les drones, les bases mobiles et les véhicules autonomes, demande des capacités d'analyse vidéo de plus en plus performantes. Les flux vidéo continus captés par ces plateformes représentent une source considérable de données, dont l'exploitation,  en temps réel ou même en différé, constitue un défi majeur dû aux limitations de la puissance de calcul, d'autonomie et de capacité de stockage des système embarqués. En conséquence, les méthodes traditionnelles d'analyse multimodale, qui combinent à la fois le traitement d'images et le traitement de l’audio, demeurent difficilement applicables sur des dispositifs robotisés contraints en ressources.
 
 L'identification de segments pertinents dans une longue séquence vidéo peut être vu comme un aspect important de la robotique mobile. La détection de moments forts ou événements importants s'avère particulièrement utile dans des sitations de navigation autonome, dans la reconnaissance de situations critiques, dans l’inspection automatisée d'infrastructures ou encore dans la surveillance en milieu complexe et changeant. Pour réaliser cette tâche efficacement sur un robot doté d'un ordinateur embarqué, l'approche conventionnelle, qui repose sur l'analyse directe des flux d'images et de sons à l'aide de modèles spécialisés en vision par ordinateur et en analyse audio, peut présenter plusieurs limites. La lourdeur computationnelle associée, la complexité d'intégration des modèles multimodaux dont la sortie est difficile à contraindre avec précision ou un comportement déterminé à cause de leur plus grande complexité interne, et la difficulté de maintenir un traitement temps réel sur des plateformes matérielles à faible capacité sont tous des bonnes raisons pour essayer de trouver une alternative.
 
@@ -120,17 +120,6 @@ VTimeLLM, de son côté, utilise une stratégie d’entraînement par étapes po
 
 Les techniques d’optimisation proposées par LongVLM \cite{weng2024}, \textit{Less is More}(CLIPBERT) \cite{lei2021_clipbert}, VTG-LLM \cite{guo2024_vtgllm}, et VTimeLLM \cite{huang2024_vtimellm} permettent de réduire considérablement la complexité de traitement dans des vidéos longues, tout en maintenant la qualité de sélection des segments pertinents. 
 
-\section{Intégration et implications pour le développement de la solution}
-
-L’ensemble des techniques et modèles analysés dans cet état de l’art met en lumière les différentes approches et technologies qui peuvent être intégrées pour développer une solution performante, capable de répondre aux attentes actuelles de l’analyse de longues vidéos et de la reconnaissance des moments saillants. Des techniques de modélisation multimodale, de localisation temporelle, de détection de saillance, de fusion des modalités et d’optimisation pour les vidéos longues se complètent pour offrir une solution cohérente et efficace pour régler le problème. En combinant ces approches, il serait possible de : 
-
-1) Analyser des signaux visuels, textuels et auditifs pour sélectionner des segments qui répondent aux attentes narratives et émotionnelles d’un moment qui serait qualifié de saillant \cite{chen2023}\cite{munasinghe2023_pgvideo}. 
-
-2) Maintenir une cohérence narrative en appliquant des techniques de localisation et de segmentation qui assurent des transitions fluides entre les moments sélectionnés \cite{wang2024_hawkeye}\cite{guo2024_vtgllm}. 
-
-3) Optimiser la pertinence des extraits retenus grâce à la détection des faits saillants et au filtrage des segments non pertinents, garantissant un résumé qui capte l’attention tout en restant précis et concis \cite{you2023_ferret}\cite{han2024_clip}. 
-
-4) Traiter efficacement les vidéos longues en appliquant des techniques d’échantillonnage et de compression qui permettent un traitement rapide et moins coûteux en ressources \cite{weng2024}\cite{lei2021_clipbert}.
 
 \chapter{Analyse comparative approfondie et différenciation par rapport aux solutions existantes}
 

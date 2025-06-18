@@ -1,0 +1,11 @@
+\section{Intégration et implications pour le développement de la solution}
+
+L’ensemble des techniques et modèles analysés dans cet état de l’art met en lumière les différentes approches et technologies qui peuvent être intégrées pour développer une solution performante, capable de répondre aux attentes actuelles de l’analyse de longues vidéos et de la reconnaissance des moments saillants. Des techniques de modélisation multimodale, de localisation temporelle, de détection de saillance, de fusion des modalités et d’optimisation pour les vidéos longues se complètent pour offrir une solution cohérente et efficace pour régler le problème. En combinant ces approches, il serait possible de : 
+
+1) Analyser des signaux visuels, textuels et auditifs pour sélectionner des segments qui répondent aux attentes narratives et émotionnelles d’un moment qui serait qualifié de saillant \cite{chen2023}\cite{munasinghe2023_pgvideo}. 
+
+2) Maintenir une cohérence narrative en appliquant des techniques de localisation et de segmentation qui assurent des transitions fluides entre les moments sélectionnés \cite{wang2024_hawkeye}\cite{guo2024_vtgllm}. 
+
+3) Optimiser la pertinence des extraits retenus grâce à la détection des faits saillants et au filtrage des segments non pertinents, garantissant un résumé qui capte l’attention tout en restant précis et concis \cite{you2023_ferret}\cite{han2024_clip}. 
+
+4) Traiter efficacement les vidéos longues en appliquant des techniques d’échantillonnage et de compression qui permettent un traitement rapide et moins coûteux en ressources \cite{weng2024}\cite{lei2021_clipbert}.
