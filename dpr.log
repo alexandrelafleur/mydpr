@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  18 JUN 2025 14:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  24 JUN 2025 18:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -233,22 +233,22 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 ) (./dpr.aux)
 \openout1 = `dpr.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Info: Redefining \degres on input line 38.
-LaTeX Info: Redefining \up on input line 38.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Info: Redefining \degres on input line 39.
+LaTeX Info: Redefining \up on input line 39.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
@@ -307,11 +307,11 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 38.
+(Font)              <12> on input line 39.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 38.
+(Font)              <8> on input line 39.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 38.
+(Font)              <6> on input line 39.
 
 
 [1
@@ -381,7 +381,7 @@ Overfull \hbox (335.91405pt too wide) in paragraph at lines 2--14
 ]
 CHAPITRE 1.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1776) has occurred while \output is active []
 
 
 
@@ -389,29 +389,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
+Underfull \vbox (badness 2903) has occurred while \output is active []
+
+
 
 [2]
-CHAPITRE 2.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[3]
 
-
-
-[3
+[4
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+CHAPITRE 2.
 
-
-
-
-Package fancyhdr Warning: \headheight is too small (25.6073pt): 
-(fancyhdr)                Make it at least 29.11858pt, for example:
-(fancyhdr)                \setlength{\headheight}{29.11858pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.51128pt}.
-
-[4]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -433,14 +423,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-
-Package fancyhdr Warning: \headheight is too small (25.6073pt): 
-(fancyhdr)                Make it at least 27.11469pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11469pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.50739pt}.
-
 [7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (25.6073pt): 
@@ -450,6 +436,16 @@ Package fancyhdr Warning: \headheight is too small (25.6073pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.51128pt}.
 
 [8]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (25.6073pt): 
+(fancyhdr)                Make it at least 27.11469pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.11469pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.50739pt}.
 
 [9]
 
@@ -460,35 +456,20 @@ Package fancyhdr Warning: \headheight is too small (25.6073pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.51128pt}.
 
-[10
-
-]
-CHAPITRE 3.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[11]
-Underfull \vbox (badness 1817) has occurred while \output is active []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (25.6073pt): 
-(fancyhdr)                Make it at least 27.11469pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11469pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.50739pt}.
-
-[12]
-Overfull \hbox (1.76472pt too wide) in paragraph at lines 144--145
-[]\T1/cmr/m/n/12 Les pla-te-formes d'édi-tion vi-déo au-to-ma-ti-sée telles que Des-cript [[]], Cap-tions.ai [[]], 2short.ai
+[10]
+Overfull \hbox (6.73993pt too wide) in paragraph at lines 131--132
+[]\T1/cmr/m/n/12 Ainsi, les tech-niques d'op-ti-mi-sa-tion pro-po-sées par LongVLM [[]], \T1/cmr/m/it/12 Less is More\T1/cmr/m/n/12 (CLIPBERT)
  []
 
 
+Overfull \hbox (8.78911pt too wide) in paragraph at lines 133--133
+[]\T1/cmss/bx/n/17.28 Analyse com-pa-ra-tive ap-pro-fon-die des so-lu-tions exis-
+ []
 
-[13]
+
+Underfull \vbox (badness 2326) has occurred while \output is active []
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (25.6073pt): 
@@ -497,19 +478,28 @@ Package fancyhdr Warning: \headheight is too small (25.6073pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.50739pt}.
 
-[14
+[11]
 
-]
-CHAPITRE 4.
+
+Package fancyhdr Warning: \headheight is too small (25.6073pt): 
+(fancyhdr)                Make it at least 29.11858pt, for example:
+(fancyhdr)                \setlength{\headheight}{29.11858pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.51128pt}.
+
+[12]
+CHAPITRE 3.
 
 Underfull \vbox (badness 1776) has occurred while \output is active []
 
 
 
-[15]
+[13
 
-[16]
-CHAPITRE 5.
+]
+
+[14]
+CHAPITRE 4.
 
 Overfull \hbox (5.53864pt too wide) in paragraph at lines 180--180
 []\T1/cmss/bx/n/20.74 APPROCHE PRO-PO-SÉE, MÉ-THO-DO-LO-GIE
@@ -520,82 +510,77 @@ Underfull \vbox (badness 3343) has occurred while \output is active []
 
 
 
-[17
+[15
 
 ]
 Underfull \vbox (badness 2326) has occurred while \output is active []
 
 
 
-[18]
-Overfull \hbox (2.51274pt too wide) in paragraph at lines 204--204
+[16]
+Overfull \hbox (2.51274pt too wide) in paragraph at lines 206--206
 []\T1/cmss/bx/n/17.28 Comparaison des ré-sul-tats avec des ré-fé-rences exis-
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3815) has occurred while \output is active []
 
 
 
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 220--224
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 222--226
 
  []
 
-<gantt.png, id=110, 685.56125pt x 552.0625pt>
-File: gantt.png Graphic file (type png)
-<use gantt.png>
-Package pdftex.def Info: gantt.png  used on input line 228.
-(pdftex.def)             Requested size: 457.80487pt x 368.66692pt.
+<gantt-v-fg.png, id=103, 705.63625pt x 615.29875pt>
+File: gantt-v-fg.png Graphic file (type png)
+<use gantt-v-fg.png>
+Package pdftex.def Info: gantt-v-fg.png  used on input line 230.
+(pdftex.def)             Requested size: 457.80487pt x 399.19774pt.
 
 
-[20]
+[18]
 
-[21 <./gantt.png>]
+[19 <./gantt-v-fg.png>]
 
-[22
+[20
 
 ]
-CHAPITRE 6.
-
-Underfull \vbox (badness 1776) has occurred while \output is active []
+CHAPITRE 5.
 
 
+[21]
 
-[23]
+[22] (./dpr.bbl
 
-[24] (./dpr.bbl
-
-[25
+[23
 
 
 ]
 
-[26])
+[24]
 
-[27]
+[25])
 
-[28
-
-] (./dpr.aux)
+[26] (./dpr.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 7515 strings out of 473190
- 136007 string characters out of 5715801
- 544758 words of memory out of 5000000
- 30662 multiletter control sequences out of 15000+600000
+ 7521 strings out of 473190
+ 136210 string characters out of 5715801
+ 545761 words of memory out of 5000000
+ 30668 multiletter control sequences out of 15000+600000
  571713 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,12n,84p,1657b,486s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,12n,82p,1763b,489s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm2488.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on dpr.pdf (40 pages, 322579 bytes).
+Output written on dpr.pdf (38 pages, 416831 bytes).
 PDF statistics:
- 189 PDF objects out of 1000 (max. 8388607)
- 123 compressed objects within 2 object streams
+ 183 PDF objects out of 1000 (max. 8388607)
+ 119 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

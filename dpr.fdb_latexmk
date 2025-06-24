@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex dpr"] 1748532973.46899 "dpr.aux" "dpr.bbl" "dpr" 1750270053.75502 2
-  "./references.bib" 1748532973.26087 15141 7f2970ec05d23ad390af0601a17f2697 ""
-  "/usr/local/texlive/2025/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "dpr.aux" 1750270053.56723 7503 a40bb79028575038a42144571b49fe91 "pdflatex"
+["bibtex dpr"] 1750800121.70286 "dpr.aux" "dpr.bbl" "dpr" 1750803341.6234 2
+  "./plain-fr.bst" 1750450559.72889 23157 a28683918225a441b72aec234560ce16 ""
+  "./references.bib" 1750799518.48493 16851 1bfd32644974b71c4161fb8c5a559a96 ""
+  "dpr.aux" 1750803341.42491 7031 f65ea971a8f3c196c7a67db03657b5b7 "pdflatex"
   (generated)
   "dpr.bbl"
   "dpr.blg"
   (rewritten before read)
-["pdflatex"] 1750270053.05636 "/Users/lafleur/dev/mydpr/dpr.tex" "dpr.pdf" "dpr" 1750270053.75511 0
-  "/Users/lafleur/dev/mydpr/dpr.tex" 1748532907.49453 48427 d68f4d8e9e642bcd8c783c8ee455f057 ""
+["pdflatex"] 1750803340.80404 "/Users/lafleur/dev/mydpr/dpr.tex" "dpr.pdf" "dpr" 1750803341.6235 0
+  "/Users/lafleur/dev/mydpr/dpr.tex" 1750800120.58358 47954 ac03b4a265f8bd3a596677539f32b70b ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
@@ -93,14 +93,14 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1744207918 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "acronymes.tex" 1747140801.85962 794 7a8bc66450a8edd7bd850382181d070e ""
-  "dpr.aux" 1750270053.56723 7503 a40bb79028575038a42144571b49fe91 "pdflatex"
-  "dpr.bbl" 1748532973.54572 9445 81509bedc373367c8920247b4698ed7a "bibtex dpr"
-  "dpr.lof" 1750270053.56849 323 a57f637c3cad045c99afda64a49aef97 "pdflatex"
-  "dpr.tex" 1748532907.49453 48427 d68f4d8e9e642bcd8c783c8ee455f057 ""
-  "dpr.toc" 1750270053.56845 2049 8e9d6f1d264b8b7cf23933bcd641d255 "pdflatex"
-  "gantt.png" 1747337150.96632 88040 59b3da660a0268bcfe23d7e8b8e3a15f ""
-  "resume-francais.tex" 1748532369.15117 1956 b11deb64570e374d42838b0df0e68c0d ""
+  "acronymes.tex" 1750275740.56878 778 988039e75366ee358e3b30e3fab1847c ""
+  "dpr.aux" 1750803341.42491 7031 f65ea971a8f3c196c7a67db03657b5b7 "pdflatex"
+  "dpr.bbl" 1750800122.88457 13203 01a39f8e905a3a0c333c6867f3b30bf4 "bibtex dpr"
+  "dpr.lof" 1750803341.42597 303 819c1fbe6d22a022f4c0fe32ea09f6c1 "pdflatex"
+  "dpr.tex" 1750800120.58358 47954 ac03b4a265f8bd3a596677539f32b70b ""
+  "dpr.toc" 1750803341.42595 1782 a3934fc6c3d146dbec6d0e7a02952076 "pdflatex"
+  "gantt-v-fg.png" 1750800033.83786 267867 3a5f1e063c155b0b02f64a636d97f9da ""
+  "resume-francais.tex" 1750274912.95837 2209 1393126a8c5957b74ec46ab3eb760387 ""
   "udes-genie-these.cls" 1732033728 44501 e949d80bbffab3c953c77c453995419d ""
   (generated)
   "dpr.aux"

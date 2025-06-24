@@ -152,11 +152,11 @@ INPUT acronymes.tex
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecti1200.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecss1728.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecsx1728.tfm
-INPUT ./gantt.png
-INPUT ./gantt.png
-INPUT ./gantt.png
-INPUT ./gantt.png
-INPUT ./gantt.png
+INPUT ./gantt-v-fg.png
+INPUT ./gantt-v-fg.png
+INPUT ./gantt-v-fg.png
+INPUT ./gantt-v-fg.png
+INPUT ./gantt-v-fg.png
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/eccc1200.tfm
 INPUT ./dpr.bbl
 INPUT ./dpr.bbl
