@@ -1,0 +1,73 @@
+\chapter{Introduction}
+
+L'analyse de longues vid\'eos pose un probl\`eme assez simple \`a comprendre. Plus la vid\'eo est longue, plus il faut traiter d'information. Les synth\`eses de Tang et al. \cite{tang2023}, de Zhou et al. \cite{zhou2024} et de Wadekar et al. \cite{wadekar2024_evolution_of_multimodal_model_architectures} montrent que, si l'on utilise directement un mod\`ele multimodal pour tout analyser, le co\^ut en calcul, en jetons et en argent monte rapidement. Cela devient vite difficile \`a justifier dans des contextes o\`u les ressources sont limit\'ees, par exemple pour un service qui doit traiter beaucoup de vid\'eos, ou pour un syst\`eme embarqu\'e qui ne dispose pas d'une grosse capacit\'e de calcul.
+
+Le probl\`eme n'est pas que les approches multimodales directes ne fonctionnent pas. Au contraire, elles sont puissantes. Le probl\`eme est plut\^ot qu'elles sont lourdes. The Evolution of Multimodal Model Architectures \cite{wadekar2024_evolution_of_multimodal_model_architectures} montre bien que leur architecture est plus complexe qu'un grand mod\`ele de langage textuel, parce qu'elles doivent encoder plusieurs modalit\'es puis les fusionner. Mixture-of-Transformers \cite{liang2025_mixture_of_transformers} va dans le m\^eme sens: cette complexit\'e entra\^\i ne plus de calcul, plus de co\^ut et une difficult\'e plus grande \`a les utiliser dans des syst\`emes contraints. Si l'objectif est de choisir un bon moment dans une vid\'eo, il devient alors l\'egitime de se demander s'il est vraiment n\'ecessaire de garder toute cette complexit\'e jusqu'au dernier moment.
+
+Le point de d\'epart de ce m\'emoire est justement l\`a. L'id\'ee est de d\'eplacer une partie du travail d'analyse vers une repr\'esentation textuelle structur\'ee de la vid\'eo, puis de laisser le choix final \`a un mod\`ele textuel. Autrement dit, au lieu de demander au mod\`ele final de regarder directement la vid\'eo, on lui donne une version textuelle organis\'ee de ce que la vid\'eo contient. L'hypoth\`ese est qu'une telle repr\'esentation peut conserver l'information utile tout en co\^utant moins cher \`a exploiter qu'une entr\'ee vid\'eo directe, m\^eme si des travaux comme Video-LLaMA \cite{anonymous2023_videollama}, VTimeLLM \cite{huang2024_vtimeLLM} et VTG-LLM \cite{guo2024_vtgLLM} montrent d\'ej\`a la force des approches multimodales directes.
+
+\section{Mise en contexte et probl\'ematique}
+
+Une transcription brute ne suffit pas toujours. Elle garde les paroles, mais elle perd beaucoup de ce qui rend un moment fort dans une vid\'eo: les changements de sc\`ene, les personnes visibles, certains gestes, le cadrage ou le contraste entre ce que l'on voit et ce que l'on entend. Si l'on veut qu'un mod\`ele textuel fasse un bon travail, il faut donc lui donner plus qu'une simple transcription. En m\^eme temps, si on lui donne trop d'information ou une information mal organis\'ee, le contexte devient lourd, bruit\'e et plus difficile \`a utiliser.
+
+La vraie question du m\'emoire est donc la suivante: comment transformer une vid\'eo en texte de mani\`ere assez riche pour garder les bons indices, mais assez claire et assez compacte pour que le mod\`ele final puisse encore prendre une bonne d\'ecision?
+
+Pour r\'epondre \`a cette question, le m\'emoire utilise la d\'etection de moments saillants comme t\^ache de validation. Cette t\^ache est un bon choix parce qu'elle est concr\`ete, exigeante et mesurable. Localizing Moments in Video with Natural Language \cite{anonymous2017_localizing}, ExCL \cite{ghosh2019_excl}, QVHighlights \cite{lei2021_moments} et Towards a Complete Benchmark on Video Moment Localization \cite{chae2024_benchmark} montrent bien qu'il ne suffit pas de comprendre de quoi parle une vid\'eo. Il faut aussi \^etre capable de choisir un bon passage et de le situer correctement dans le temps. Si la repr\'esentation texte est mauvaise, l'erreur se voit tout de suite dans l'extrait choisi.
+
+\section{Question de recherche}
+
+La question de recherche du m\'emoire peut \^etre formul\'ee ainsi:
+
+\begin{quote}
+Comment repr\'esenter une longue vid\'eo sous forme textuelle de mani\`ere assez fid\`ele et assez structur\'ee pour qu'un grand mod\`ele de langage puisse identifier un moment saillant avec une qualit\'e comparable \`a une approche multimodale directe, tout en consommant beaucoup moins de ressources?
+\end{quote}
+
+Cette question a deux dimensions. La premi\`ere porte sur la repr\'esentation elle-m\^eme: qu'est-ce qu'il faut garder de la vid\'eo, sous quelle forme, et avec quel niveau de d\'etail? La deuxi\`eme porte sur l'utilisation de cette repr\'esentation: est-ce qu'un mod\`ele textuel peut vraiment s'en servir pour choisir le bon moment?
+
+L'article central du m\'emoire traite cette question en insistant davantage sur la repr\'esentation comme \'etat textuel durable. Le m\'emoire, dans son ensemble, garde un angle un peu plus large: le compromis entre qualit\'e de s\'election, co\^ut et possibilit\'e de d\'eploiement dans des syst\`emes contraints.
+
+\section{Objectifs du projet de recherche}
+
+L'objectif g\'en\'eral est de montrer qu'une repr\'esentation textuelle structur\'ee peut servir de support principal \`a la s\'election de moments saillants dans de longues vid\'eos, avec une performance comp\'etitive et un co\^ut plus faible qu'une entr\'ee vid\'eo directe.
+
+Cet objectif se d\'ecline en plusieurs sous-objectifs:
+
+\begin{enumerate}
+  \item construire une cha\^\i ne de traitement capable de transformer une vid\'eo en donn\'ees textuelles et temporelles persistantes;
+  \item d\'efinir une repr\'esentation textuelle structur\'ee qui conserve l'ordre temporel, les sc\`enes, le dialogue et certains indices visuels;
+  \item mettre en place un jeu d'\'evaluation reproductible et une base de donn\'ees permettant de comparer plusieurs repr\'esentations, plusieurs consignes et plusieurs familles de mod\`eles;
+  \item mesurer le compromis entre qualit\'e de s\'election, volume de contexte, temps de r\'eponse et co\^ut;
+  \item examiner, dans une campagne compl\'ementaire, si l'ajustement fin de mod\`eles plus petits peut lui aussi servir \`a d\'eplacer une partie du calcul vers l'amont.
+\end{enumerate}
+
+Ces objectifs ne sont plus seulement des intentions. La cha\^\i ne a \'et\'e construite, le jeu \texttt{validation29} a \'et\'e mont\'e, plusieurs conditions ont \'et\'e compar\'ees, et une campagne historique sur l'ajustement fin des mod\`eles Gemini a pu \^etre r\'eint\'egr\'ee \`a l'analyse.
+
+\section{Contributions originales}
+
+Les contributions du m\'emoire se situent \`a plusieurs niveaux. La premi\`ere est la construction d'une cha\^\i ne locale qui transforme la vid\'eo en texte structur\'e exploitable par un mod\`ele textuel. La deuxi\`eme est la mise en place d'un jeu d'\'evaluation reproductible, avec une base SQLite qui conserve les contextes, les ex\'ecutions, les co\^uts et les scores.
+
+La troisi\`eme contribution est la comparaison elle-m\^eme. Le m\'emoire ne se contente pas de montrer qu'une repr\'esentation texte est possible. Il montre aussi ce qu'elle vaut par rapport \`a une entr\'ee vid\'eo directe, par rapport \`a une variante sans descriptions visuelles, et par rapport \`a une simple transcription. Il ajoute en plus une lecture compl\'ementaire sur l'ajustement fin, pour montrer qu'il existe une autre mani\`ere de d\'eplacer le calcul.
+
+Enfin, le travail a aussi une contribution pratique. Une partie des abstractions construites pour le jeu d'\'evaluation a \`a nouveau \'et\'e utilis\'ee dans \texttt{mecene-clips}. Cela ne remplace pas la validation scientifique, mais cela montre que la m\'ethode est assez stable pour sortir du cadre purement exp\'erimental.
+
+\begin{table}[ht]
+\centering
+\caption{Correspondance entre les contributions et les chapitres du m\'emoire}
+\label{tab:contributions-map}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.46\textwidth} >{\raggedright\arraybackslash}p{0.22\textwidth} >{\raggedright\arraybackslash}X}
+\toprule
+Contribution & Preuve principale & Emplacement principal \\
+\midrule
+Pipeline multimodal vers texte structur\'e & Code du benchmark et description m\'ethodologique & Chapitres 3 et 4 \\
+Benchmark \texttt{validation29} reproductible & Base SQLite, scripts de pr\'eparation et d'ex\'ecution & Chapitres 3 et 4 \\
+Comparaison structur\'e-texte vs entr\'ee vid\'eo directe & Ex\'ecutions compl\`etes sur 29 \'echantillons & Chapitre 4 \\
+Transfert vers une application de production & Int\'egration dans \texttt{mecene-clips} & Chapitre 5 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Plan du document}
+
+Le chapitre~2 pr\'esente l'\'etat de l'art et situe le travail par rapport \`a la d\'etection de moments saillants, aux approches multimodales sur vid\'eos longues et aux repr\'esentations interm\'ediaires. Le chapitre~3 explique la logique du m\'emoire combin\'e et la mani\`ere dont l'article, le jeu d'\'evaluation et l'application s'articulent.
+
+Le chapitre~4 contient l'avant-propos exig\'e par le protocole, puis l'article central. C'est l\`a que sont pr\'esent\'es la m\'ethode, la repr\'esentation, le jeu d'\'evaluation et les principaux r\'esultats. Le chapitre~5 revient ensuite sur la port\'ee de ces r\'esultats, sur la campagne compl\'ementaire d'ajustement fin et sur le transfert vers le produit. Enfin, le chapitre~6 r\'esume les contributions valid\'ees par le m\'emoire et ouvre sur les prolongements les plus importants.

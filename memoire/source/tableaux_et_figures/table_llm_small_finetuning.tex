@@ -1,0 +1,16 @@
+\begin{table}[ht]
+\centering
+\footnotesize
+\caption{Impact du fine-tuning sur les petites variantes Gemini 2.5, avec les m\^emes 29 cas de validation lorsqu'ils sont disponibles}
+\label{tab:llm-small-finetuning}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}Xrrrrr}
+\toprule
+Variante & n & IoU moy. & $\Delta$ vs base & Temps (s) & Co\^ut / 100 vid. \\
+\midrule
+Flash de base & 29 & 0.300 & 0.000 & 2.0 & 0.127 \\
+Flash fine-tune texte & 27 & 0.437 & 0.137 & 21.6 & 0.110 \\
+Flash-Lite de base & 29 & 0.361 & 0.000 & 2.0 & 0.032 \\
+Flash-Lite fine-tune texte & 29 & 0.316 & -0.045 & 1.2 & 0.027 \\
+\bottomrule
+\end{tabularx}
+\end{table}

@@ -1,0 +1,48 @@
+% Point d'entree canonique de la DPR compile depuis le dossier document/.
+\documentclass[livre]{udes-genie-these}
+
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{url}  % Enables the use of \url{}
+\usepackage{graphicx}
+\usepackage{color,soul}
+\usepackage{lscape} % For landscape orientation
+
+
+\ConfigurationDocument
+{
+  langue = francais,
+  type = dprmaitrise,
+  programme = electrique,
+  lignes,
+  liste-figures,
+  % liste-tableaux,
+  fichier-resume-francais = {../source/resume-francais},
+  %fichier-resume-anglais = {resume-anglais},
+  % fichier-remerciements = {merci},
+  % fichier-lexique = {lexique},
+  % fichier-symboles = {symboles},
+  fichier-acronymes = {../source/acronymes},
+  fichiers-references = {references},
+  auto-bib,
+  style-references = plain-fr,
+}
+
+\TitreFrancais{DÉTECTION DES MOMENTS SAILLANTS D'UNE VIDÉO EN UTILISANT UNE REPRÉSENTATION TEXTUELLE}
+\Auteur{Alexandre}{LAFLEUR}
+\Date{Mai}{2025}
+\MotsClesFrancais{Intelligence artificielle, résumé vidéo, LLM}
+
+\Directeur{François}{GRONDIN}
+\Evaluateur{François}{MICHAUD}
+\Evaluateur{François}{FERLAND}
+
+\begin{document}
+
+\input{../source/01-introduction}
+\input{../source/02-etat-art}
+\input{../source/03-problematique}
+\input{../source/04-approche-proposee}
+\input{../source/05-conclusion}
+
+\end{document}

@@ -1,0 +1,21 @@
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}INTRODUCTION}{1}{}%
+\contentsline {chapter}{\numberline {2}Synthèse des contributions pour l’extraction automatique de moments clés dans les vidéos longues}{3}{}%
+\contentsline {section}{\numberline {2.1}Modélisation vidéo-textuelle et multimodale pour la sélection de clips}{3}{}%
+\contentsline {section}{\numberline {2.2}Localisation et segmentation temporelle des moments clés}{5}{}%
+\contentsline {section}{\numberline {2.3}Détection des faits saillants et filtrage du bruit}{6}{}%
+\contentsline {section}{\numberline {2.4}Fusion multimodale et alignement pour une narration cohérente}{6}{}%
+\contentsline {section}{\numberline {2.5}Optimisation des modèles et traitement des vidéos longues}{8}{}%
+\contentsline {section}{\numberline {2.6}Analyse comparative approfondie des solutions existantes et différenciations de la solution proposée}{9}{}%
+\contentsline {chapter}{\numberline {3}PROBLÉMATIQUE}{11}{}%
+\contentsline {chapter}{\numberline {4}APPROCHE PROPOSÉE, MÉTHODOLOGIE ET ÉCHÉANCIER}{13}{}%
+\contentsline {section}{\numberline {4.1}Élaboration d'une représentation textuelle structurée}{13}{}%
+\contentsline {section}{\numberline {4.2}Utilisation d'un grand modèle de langage pour identifier les segments clés}{14}{}%
+\contentsline {section}{\numberline {4.3}Comparaison des résultats avec des références existantes}{15}{}%
+\contentsline {section}{\numberline {4.4}Processus itératif d'optimisation}{15}{}%
+\contentsline {section}{\numberline {4.5}Échéancier}{16}{}%
+\contentsline {chapter}{\numberline {5}CONCLUSION}{19}{}%
+\contentsline {chapter}{LISTE DES RÉFÉRENCES}{21}{}%

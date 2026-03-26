@@ -1,0 +1,399 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname fonteauteurs\endcsname\relax
+\def\fonteauteurs{\scshape}\fi
+
+\bibitem{short2024}
+\bgroup\fonteauteurs\bgroup 2short\egroup\egroup{} :
+\newblock 2short tool.
+\newblock [En ligne]. Disponible: https://2short.ai.
+\newblock Consulté le 2024-11-04.
+
+\bibitem{zhang2023}
+M.~M. Islam Z. Wang S. Yu M. Bansal G.~Bertasius \bgroup\fonteauteurs\bgroup
+  C.~Zhang\egroup\egroup{}, T.~Lu :
+\newblock A simple {LLM} framework for long-range video question-answering.
+\newblock {\em arXiv preprint}, arXiv:2312.17235, 2023.
+
+\bibitem{zhou2023lima}
+P.~Xu S. Iyer J. Sun Y. Mao X. Ma A. Efrat P. Yu L. Yu S. Zhang G. Ghosh M.
+  Lewis L. Zettlemoyer O.~Levy \bgroup\fonteauteurs\bgroup
+  C.~Zhou\egroup\egroup{}, P.~Liu :
+\newblock Lima: Less is more for alignment.
+\newblock \emph{Dans} {\em Proceedings of the International Conference on
+  Neural Information Processing Systems}, volume~36, pages 55006--55021. Neural
+  Information Processing Systems, 2023.
+
+\bibitem{captions2024}
+\bgroup\fonteauteurs\bgroup Captions\egroup\egroup{} :
+\newblock Captions tool.
+\newblock [En ligne]. Disponible:
+  https://www.captions.ai/tools/ai-clip-generator.
+\newblock Consulté le 2024-11-04.
+
+\bibitem{chae2024_benchmark}
+J.~\bgroup\fonteauteurs\bgroup Chae\egroup\egroup{},
+  D.~\bgroup\fonteauteurs\bgroup Kim\egroup\egroup{},
+  K.~\bgroup\fonteauteurs\bgroup Kim\egroup\egroup{},
+  D.~\bgroup\fonteauteurs\bgroup Lee\egroup\egroup{},
+  S.~\bgroup\fonteauteurs\bgroup Lee\egroup\egroup{},
+  S.~\bgroup\fonteauteurs\bgroup Ha\egroup\egroup{},
+  J.~\bgroup\fonteauteurs\bgroup Mun\egroup\egroup{},
+  W.~\bgroup\fonteauteurs\bgroup Kang\egroup\egroup{},
+  B.~\bgroup\fonteauteurs\bgroup Roh\egroup\egroup{} et
+  J.~\bgroup\fonteauteurs\bgroup Lee\egroup\egroup{} :
+\newblock Towards a complete benchmark on video moment localization.
+\newblock \emph{Dans} {\em Proceedings of the International Conference on
+  Artificial Intelligence and Statistics}, volume 238, pages 4168--4176.
+  Machine Learning Research, 2024.
+
+\bibitem{chen2023}
+G.~\bgroup\fonteauteurs\bgroup Chen\egroup\egroup{}, Y.-D.
+  \bgroup\fonteauteurs\bgroup Zheng\egroup\egroup{},
+  J.~\bgroup\fonteauteurs\bgroup Wang\egroup\egroup{},
+  J.~\bgroup\fonteauteurs\bgroup Xu\egroup\egroup{},
+  Y.~\bgroup\fonteauteurs\bgroup Huang\egroup\egroup{},
+  J.~\bgroup\fonteauteurs\bgroup Pan\egroup\egroup{},
+  Y.~\bgroup\fonteauteurs\bgroup Wang\egroup\egroup{},
+  Y.~\bgroup\fonteauteurs\bgroup Wang\egroup\egroup{},
+  Y.~\bgroup\fonteauteurs\bgroup Qiao\egroup\egroup{},
+  T.~\bgroup\fonteauteurs\bgroup Lu\egroup\egroup{} et
+  L.~\bgroup\fonteauteurs\bgroup Wang\egroup\egroup{} :
+\newblock Video{LLM}: Modeling video sequence with large language models.
+\newblock {\em arXiv preprint}, arXiv:2305.13292, 2023.
+
+\bibitem{descript2024}
+\bgroup\fonteauteurs\bgroup Descript\egroup\egroup{} :
+\newblock Descript tool.
+\newblock [En ligne]. Disponible: https://www.descript.com/.
+\newblock Consulté le 2024-11-04.
+
+\bibitem{heilbron2015_activitynet}
+B.~Ghanem J.~Niebles \bgroup\fonteauteurs\bgroup F.~Heilbron\egroup\egroup{},
+  V.~Escorcia :
+\newblock Activitynet: A large-scale video benchmark for human activity
+  understanding.
+\newblock \emph{Dans} {\em Proceedings of the IEEE Conference on Computer
+  Vision and Pattern Recognition}, pages 961--970, 2015.
+
+\bibitem{zhang2019_memory}
+C.~\bgroup\fonteauteurs\bgroup Fan\egroup\egroup{},
+  X.~\bgroup\fonteauteurs\bgroup Zhu\egroup\egroup{},
+  W.~\bgroup\fonteauteurs\bgroup Li\egroup\egroup{},
+  C.~\bgroup\fonteauteurs\bgroup Fang\egroup\egroup{},
+  G.~\bgroup\fonteauteurs\bgroup Lin\egroup\egroup{},
+  R.~\bgroup\fonteauteurs\bgroup Yang\egroup\egroup{} et
+  D.~\bgroup\fonteauteurs\bgroup Thalmann\egroup\egroup{} :
+\newblock Heterogeneous memory enhanced multimodal attention model for video
+  question answering.
+\newblock \emph{Dans} {\em Proceedings of the IEEE/CVF Conference on Computer
+  Vision and Pattern Recognition}, pages 1999--2007, 2019.
+
+\bibitem{framedrop2024}
+\bgroup\fonteauteurs\bgroup FrameDrop\egroup\egroup{} :
+\newblock Framedrop tool.
+\newblock [En ligne]. Disponible: https://www.framedrop.ai/.
+\newblock Consulté le 2024-11-04.
+
+\bibitem{ghosh2019_excl}
+S.~\bgroup\fonteauteurs\bgroup Ghosh\egroup\egroup{},
+  A.~\bgroup\fonteauteurs\bgroup Agarwal\egroup\egroup{},
+  Z.~\bgroup\fonteauteurs\bgroup Parekh\egroup\egroup{} et
+  A.~\bgroup\fonteauteurs\bgroup Hauptmann\egroup\egroup{} :
+\newblock Excl: Extractive clip localization using natural language
+  descriptions.
+\newblock \emph{Dans} {\em Proceedings of the Conference of the North American
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies, Volume 1}, pages 1984--1990. Association for Computational
+  Linguistics, 2019.
+
+\bibitem{guo2024_vtgllm}
+Y.~\bgroup\fonteauteurs\bgroup Guo\egroup\egroup{},
+  J.~\bgroup\fonteauteurs\bgroup Liu\egroup\egroup{},
+  M.~\bgroup\fonteauteurs\bgroup Li\egroup\egroup{},
+  X.~\bgroup\fonteauteurs\bgroup Tang\egroup\egroup{},
+  X.~\bgroup\fonteauteurs\bgroup Chen\egroup\egroup{} et
+  B.~\bgroup\fonteauteurs\bgroup Zhao\egroup\egroup{} :
+\newblock Vtg-{LLM}: Integrating timestamp knowledge into video {LLM}s for
+  enhanced video temporal grounding.
+\newblock {\em arXiv preprint arXiv:2405.13382}, 2024.
+
+\bibitem{you2023_ferret}
+Z.~Gan X. Du B. Zhang Z. Wang L. Cao S.-F. Chang Y.~Yang
+  \bgroup\fonteauteurs\bgroup H.~You\egroup\egroup{}, H.~Zhang :
+\newblock Ferret: Refer and ground anything anywhere at any granularity.
+\newblock {\em arXiv preprint arXiv:2310.07704}, 2023.
+
+\bibitem{han2024_clip}
+D.~\bgroup\fonteauteurs\bgroup Han\egroup\egroup{},
+  S.~\bgroup\fonteauteurs\bgroup Seo\egroup\egroup{},
+  E.~\bgroup\fonteauteurs\bgroup Park\egroup\egroup{}, S.-U.
+  \bgroup\fonteauteurs\bgroup Nam\egroup\egroup{} et
+  N.~\bgroup\fonteauteurs\bgroup Kwak\egroup\egroup{} :
+\newblock Unleash the potential of clip for video highlight detection.
+\newblock {\em arXiv preprint arXiv:2404.01745}, 2024.
+
+\bibitem{anonymous2017_localizing}
+L.~A. \bgroup\fonteauteurs\bgroup Hendricks\egroup\egroup{},
+  O.~\bgroup\fonteauteurs\bgroup Wang\egroup\egroup{},
+  E.~\bgroup\fonteauteurs\bgroup Shechtman\egroup\egroup{},
+  J.~\bgroup\fonteauteurs\bgroup Sivic\egroup\egroup{},
+  T.~\bgroup\fonteauteurs\bgroup Darrell\egroup\egroup{} et
+  B.~\bgroup\fonteauteurs\bgroup Russell\egroup\egroup{} :
+\newblock Localizing moments in video with natural language.
+\newblock \emph{Dans} {\em Proceedings of the IEEE International Conference on
+  Computer Vision}, pages 5804--5813, 2017.
+
+\bibitem{huang2024_vtimellm}
+B.~\bgroup\fonteauteurs\bgroup Huang\egroup\egroup{},
+  X.~\bgroup\fonteauteurs\bgroup Wang\egroup\egroup{},
+  H.~\bgroup\fonteauteurs\bgroup Chen\egroup\egroup{},
+  Z.~\bgroup\fonteauteurs\bgroup Song\egroup\egroup{} et
+  W.~\bgroup\fonteauteurs\bgroup Zhu\egroup\egroup{} :
+\newblock Vtime{LLM}: Empower {LLM} to grasp video moments.
+\newblock \emph{Dans} {\em Proceedings of the IEEE/CVF Conference on Computer
+  Vision and Pattern Recognition}, pages 14271--14280, 2024.
+
+\bibitem{lei2021_moments}
+M.~Bansal \bgroup\fonteauteurs\bgroup J.~Lei\egroup\egroup{}, T. L.~Berg :
+\newblock Qvhighlights: Detecting moments and highlights in videos via natural
+  language queries.
+\newblock \emph{Dans} {\em Proceedings of the International Conference on
+  Neural Information Processing Systems}, pages 11846--11858. Neural
+  Information Processing Systems, 2021.
+
+\bibitem{ataallah2024minigpt4video}
+E.~Abdelrahman E. Sleiman D. Zhu J. Ding M.~Elhoseiny
+  \bgroup\fonteauteurs\bgroup K.~Ataallah\egroup\egroup{}, X.~Shen :
+\newblock Minigpt4-video: Advancing multimodal llms for video understanding
+  with interleaved visual-textual tokens.
+\newblock {\em arXiv preprint arXiv:2404.03413}, 2024.
+
+\bibitem{zhang2016_lstm}
+F.~Sha K.~Grauman \bgroup\fonteauteurs\bgroup K.~Zhang\egroup\egroup{},
+  W.-L.~Chao :
+\newblock Video summarization with long short-term memory.
+\newblock \emph{Dans} {\em Proceedings of the European Conference on Computer
+  Vision}, pages 766--782. Springer, 2016.
+
+\bibitem{klap2024}
+\bgroup\fonteauteurs\bgroup Klap\egroup\egroup{} :
+\newblock Klap tool.
+\newblock [En ligne]. Disponible: https://klap.app.
+\newblock Consulté le 2024-11-04.
+
+\bibitem{lei2021_clipbert}
+J.~\bgroup\fonteauteurs\bgroup Lei\egroup\egroup{},
+  L.~\bgroup\fonteauteurs\bgroup Li\egroup\egroup{},
+  L.~\bgroup\fonteauteurs\bgroup Zhou\egroup\egroup{},
+  Z.~\bgroup\fonteauteurs\bgroup Gan\egroup\egroup{}, T.~L.
+  \bgroup\fonteauteurs\bgroup Berg\egroup\egroup{},
+  M.~\bgroup\fonteauteurs\bgroup Bansal\egroup\egroup{} et
+  J.~\bgroup\fonteauteurs\bgroup Liu\egroup\egroup{} :
+\newblock Less is more: {CLIPBERT} for video-and-language learning via sparse
+  sampling.
+\newblock \emph{Dans} {\em Proceedings of the IEEE/CVF Conference on Computer
+  Vision and Pattern Recognition}, pages 7327--7337, 2021.
+
+\bibitem{liang2025_mixture_of_transformers}
+W.~\bgroup\fonteauteurs\bgroup Liang\egroup\egroup{},
+  L.~\bgroup\fonteauteurs\bgroup Yu\egroup\egroup{},
+  L.~\bgroup\fonteauteurs\bgroup Luo\egroup\egroup{},
+  S.~\bgroup\fonteauteurs\bgroup Iyer\egroup\egroup{},
+  N.~\bgroup\fonteauteurs\bgroup Dong\egroup\egroup{},
+  C.~\bgroup\fonteauteurs\bgroup Zhou\egroup\egroup{},
+  G.~\bgroup\fonteauteurs\bgroup Ghosh\egroup\egroup{},
+  M.~\bgroup\fonteauteurs\bgroup Lewis\egroup\egroup{},
+  W.~t.~\bgroup\fonteauteurs\bgroup Yih\egroup\egroup{},
+  L.~\bgroup\fonteauteurs\bgroup Zettlemoyer\egroup\egroup{} et X.~V.
+  \bgroup\fonteauteurs\bgroup Lin\egroup\egroup{} :
+\newblock Mixture-of-transformers: A sparse and scalable architecture for
+  multi-modal foundation models.
+\newblock {\em Transactions on Machine Learning Research}, 2025.
+
+\bibitem{liu2022_umt}
+Y.~\bgroup\fonteauteurs\bgroup Liu\egroup\egroup{},
+  S.~\bgroup\fonteauteurs\bgroup Li\egroup\egroup{},
+  Y.~\bgroup\fonteauteurs\bgroup Wu\egroup\egroup{}, C.~W.
+  \bgroup\fonteauteurs\bgroup Chen\egroup\egroup{},
+  Y.~\bgroup\fonteauteurs\bgroup Shan\egroup\egroup{} et
+  X.~\bgroup\fonteauteurs\bgroup Qie\egroup\egroup{} :
+\newblock Umt: Unified multi-modal transformers for joint video moment
+  retrieval and highlight detection.
+\newblock \emph{Dans} {\em Proceedings of the IEEE/CVF Conference on Computer
+  Vision and Pattern Recognition}, pages 3032--3041, 2022.
+
+\bibitem{bain2022}
+G.~Varol A.~Zisserman \bgroup\fonteauteurs\bgroup M.~Bain\egroup\egroup{},
+  A.~Nagrani :
+\newblock A clip-hitchhiker's guide to long video retrieval.
+\newblock {\em arXiv preprint}, arXiv:2205.08508, 2022.
+
+\bibitem{maheux2022_ttop}
+M.-A. \bgroup\fonteauteurs\bgroup Maheux\egroup\egroup{},
+  C.~\bgroup\fonteauteurs\bgroup Caya\egroup\egroup{},
+  D.~\bgroup\fonteauteurs\bgroup Létourneau\egroup\egroup{} et
+  F.~\bgroup\fonteauteurs\bgroup Michaud\egroup\egroup{} :
+\newblock T-top, a sar experimental platform.
+\newblock \emph{Dans} {\em Proceedings of the 2022 ACM/IEEE International
+  Conference on Human-Robot Interaction}, pages 904--908, 2022.
+
+\bibitem{munch2024}
+\bgroup\fonteauteurs\bgroup Munch\egroup\egroup{} :
+\newblock Munch tool.
+\newblock [En ligne]. Disponible: https://www.getmunch.com.
+\newblock Consulté le 2024-11-04.
+
+\bibitem{opusclip2024}
+\bgroup\fonteauteurs\bgroup OpusClip\egroup\egroup{} :
+\newblock Opusclip tool.
+\newblock [En ligne]. Disponible: https://www.opus.pro.
+\newblock Consulté le 2024-11-04.
+
+\bibitem{powder2024}
+\bgroup\fonteauteurs\bgroup Powder\egroup\egroup{} :
+\newblock Powder tool.
+\newblock [En ligne]. Disponible: https://powder.gg.
+\newblock Consulté le 2024-11-04.
+
+\bibitem{prabhu2017_retrieval}
+M.~Rohrbach J. Feng K. Saenko T.~Darrell \bgroup\fonteauteurs\bgroup
+  R.~Hu\egroup\egroup{}, H.~Xu :
+\newblock Natural language object retrieval.
+\newblock \emph{Dans} {\em Proceedings of the IEEE Conference on Computer
+  Vision and Pattern Recognition}, pages 4555--4564, 2016.
+
+\bibitem{anonymous2023_valley}
+M.~Yang J. Dong D. Li P. Lu T. Wang L. Hu M. Qiu Z.~Wei
+  \bgroup\fonteauteurs\bgroup R.~Luo\egroup\egroup{}, Z.~Zhao :
+\newblock Valley: Video assistant with large language model enhanced ability.
+\newblock {\em arXiv preprint arXiv:2306.07207}, 2023.
+
+\bibitem{radford2023_whisper}
+A.~\bgroup\fonteauteurs\bgroup Radford\egroup\egroup{},
+  J.~\bgroup\fonteauteurs\bgroup Kim\egroup\egroup{},
+  T.~\bgroup\fonteauteurs\bgroup Xu\egroup\egroup{},
+  G.~\bgroup\fonteauteurs\bgroup Brockman\egroup\egroup{},
+  C.~\bgroup\fonteauteurs\bgroup McLeavey\egroup\egroup{} et
+  I.~\bgroup\fonteauteurs\bgroup Sutskever\egroup\egroup{} :
+\newblock Whisper: Robust speech recognition via large-scale weak supervision.
+\newblock \emph{Dans} {\em Proceedings of the International Conference on
+  Machine Learning}, pages 28492--28518, 2023.
+
+\bibitem{munasinghe2023_pgvideo}
+M.~Maaz H. A. Rasheed S. Khan M. Shah F.~Khan \bgroup\fonteauteurs\bgroup
+  S.~Munasinghe\egroup\egroup{}, R.~Thushara :
+\newblock Pg-video-llava: Pixel grounding large video-language models.
+\newblock {\em arXiv preprint arXiv:2311.13435}, 2023.
+
+\bibitem{zhang2020_temporal}
+J.~Fu J.~Luo \bgroup\fonteauteurs\bgroup S.~Zhang\egroup\egroup{}, H.~Peng :
+\newblock Learning {2D} temporal adjacent networks for moment localization with
+  natural language.
+\newblock \emph{Dans} {\em Proceedings of the AAAI Conference on Artificial
+  Intelligence}, pages 12870--12877, 2020.
+
+\bibitem{zheng2023gptfathom}
+Y.~Zhu C. Xi P. Gao X. Zhou K. C.-C.~Chang \bgroup\fonteauteurs\bgroup
+  S.~Zheng\egroup\egroup{}, Y.~Zhang :
+\newblock Gpt‑fathom: Benchmarking large language models to decipher the
+  evolutionary path towards gpt‑4 and beyond.
+\newblock {\em arXiv preprint arXiv:2309.16583v5}, 2023.
+
+\bibitem{sendshort2024}
+\bgroup\fonteauteurs\bgroup SendShort\egroup\egroup{} :
+\newblock Sendshort tool.
+\newblock [En ligne]. Disponible: https://sendshort.ai.
+\newblock Consulté le 2024-11-04.
+
+\bibitem{ssemble2024}
+\bgroup\fonteauteurs\bgroup Ssemble\egroup\egroup{} :
+\newblock Ssemble tool.
+\newblock [En ligne]. Disponible: https://www.ssemble.com.
+\newblock Consulté le 2024-11-04.
+
+\bibitem{recast2024}
+Recast \bgroup\fonteauteurs\bgroup Studio\egroup\egroup{} :
+\newblock Recast studio tool.
+\newblock [En ligne]. Disponible: https://recast.studio.
+\newblock Consulté le 2024-11-04.
+
+\bibitem{sun2023_gptsee}
+Y.~\bgroup\fonteauteurs\bgroup Sun\egroup\egroup{},
+  Y.~\bgroup\fonteauteurs\bgroup Xu\egroup\egroup{},
+  Z.~\bgroup\fonteauteurs\bgroup Xie\egroup\egroup{},
+  Y.~\bgroup\fonteauteurs\bgroup Shu\egroup\egroup{} et
+  S.~\bgroup\fonteauteurs\bgroup Du\egroup\egroup{} :
+\newblock Gptsee: Enhancing moment retrieval and highlight detection via
+  description-based similarity features.
+\newblock \emph{Dans} {\em Proceedings of the IEEE Signal Processing Letters},
+  pages 521--525, 2024.
+
+\bibitem{lin2014_coco}
+S.~Belongie J. Hays P. Perona D. Ramanan P. Dollár-C.~Zitnick
+  \bgroup\fonteauteurs\bgroup T.~Lin\egroup\egroup{}, M.~Maire :
+\newblock Microsoft coco: Common objects in context.
+\newblock \emph{Dans} {\em Proceedings of the European Conference on Computer
+  Vision}, pages 740--755. Springer International Publishing, 2014.
+
+\bibitem{feng2023}
+H.~Chen Z. Zhang Z. Song Y. Zhou W.~Zhu \bgroup\fonteauteurs\bgroup
+  W.~Feng\egroup\egroup{}, X.~Wang :
+\newblock {LLM}4vg: Large language models evaluation for video grounding.
+\newblock {\em arXiv preprint arXiv:2312.14206}, 2023.
+
+\bibitem{wadekar2024_evolution_of_multimodal_model_architectures}
+S.~N. \bgroup\fonteauteurs\bgroup Wadekar\egroup\egroup{},
+  A.~\bgroup\fonteauteurs\bgroup Chaurasia\egroup\egroup{},
+  A.~\bgroup\fonteauteurs\bgroup Chadha\egroup\egroup{} et
+  E.~\bgroup\fonteauteurs\bgroup Culurciello\egroup\egroup{} :
+\newblock The evolution of multimodal model architectures.
+\newblock {\em arXiv preprint arXiv:2405.17927}, 2024.
+
+\bibitem{weng2024}
+Y.~\bgroup\fonteauteurs\bgroup Weng\egroup\egroup{},
+  M.~\bgroup\fonteauteurs\bgroup Han\egroup\egroup{},
+  H.~\bgroup\fonteauteurs\bgroup He\egroup\egroup{},
+  X.~\bgroup\fonteauteurs\bgroup Chang\egroup\egroup{} et
+  B.~\bgroup\fonteauteurs\bgroup Zhuang\egroup\egroup{} :
+\newblock Longvlm: Efficient long video understanding via large language
+  models.
+\newblock \emph{Dans} {\em Proceedings of the European Conference on Computer
+  Vision}, 2024.
+
+\bibitem{xu2024}
+J.~\bgroup\fonteauteurs\bgroup Xu\egroup\egroup{},
+  C.~\bgroup\fonteauteurs\bgroup Lan\egroup\egroup{},
+  W.~\bgroup\fonteauteurs\bgroup Xie\egroup\egroup{},
+  X.~\bgroup\fonteauteurs\bgroup Chen\egroup\egroup{} et
+  Y.~\bgroup\fonteauteurs\bgroup Lu\egroup\egroup{} :
+\newblock Slot-vlm: Slowfast slots for video-language modeling.
+\newblock {\em arXiv preprint arXiv:2402.13088}, 2024.
+
+\bibitem{tian2025yolov12}
+D.~Doermann \bgroup\fonteauteurs\bgroup Y.~Tian\egroup\egroup{}, Q.~Ye :
+\newblock Yolov12: Attention-centric real-time object detectors.
+\newblock {\em arXiv preprint arXiv:2502.12524}, 2025.
+
+\bibitem{wang2024_hawkeye}
+J.~Liang Y. Wang Q. Liu D.~Zhao \bgroup\fonteauteurs\bgroup
+  Y.~Wang\egroup\egroup{}, X.~Meng :
+\newblock Hawkeye: Training video-text {LLM}s for grounding text in videos.
+\newblock {\em arXiv preprint arXiv:2403.10228}, 2024.
+
+\bibitem{anonymous2023_bubogpt}
+D.~Zhou Z. Huang J. Feng B.~Kang \bgroup\fonteauteurs\bgroup
+  Y.~Zhao\egroup\egroup{}, Z.~Lin :
+\newblock Bubogpt: Enabling visual grounding in multi-modal {LLM}s.
+\newblock {\em arXiv preprint arXiv:2307.08581}, 2023.
+
+\bibitem{anonymous2023_videollama}
+H.~\bgroup\fonteauteurs\bgroup Zhang\egroup\egroup{},
+  X.~\bgroup\fonteauteurs\bgroup Li\egroup\egroup{} et
+  L.~\bgroup\fonteauteurs\bgroup Bing\egroup\egroup{} :
+\newblock Video-llama: An instruction-tuned audio-visual language model for
+  video understanding.
+\newblock \emph{Dans} {\em Proceedings of the Conference on Empirical Methods
+  in Natural Language Processing: System Demonstrations}, pages 543--553.
+  Association for Computational Linguistics, 2023.
+
+\end{thebibliography}

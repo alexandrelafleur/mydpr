@@ -1,0 +1,15 @@
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\contentsline {table}{\numberline {2}{\ignorespaces Statistiques descriptives du benchmark \texttt {validation29}}}{3}{}%
+\contentsline {table}{\numberline {3}{\ignorespaces Composantes principales du pipeline et sorties persist\'ees}}{4}{}%
+\contentsline {table}{\numberline {4}{\ignorespaces Variantes de contexte disponibles sur l'ensemble complet}}{4}{}%
+\contentsline {table}{\numberline {5}{\ignorespaces Synth\`ese des pilotes exploratoires utilis\'es pour faire \'evoluer la repr\'esentation}}{6}{}%
+\contentsline {table}{\numberline {6}{\ignorespaces Jalons o\`u un changement de repr\'esentation ou de prompt am\'eliore le meilleur score exploratoire connu}}{7}{}%
+\contentsline {table}{\numberline {7}{\ignorespaces Conditions compl\`etes sur 29 \'echantillons retenues pour les revendications principales}}{7}{}%
+\contentsline {table}{\numberline {8}{\ignorespaces Comparaison contr\^ol\'ee sous Gemini 3.1 Flash Lite: m\^eme mod\`ele, m\^eme protocole de sortie, et variation explicite de la repr\'esentation d'entr\'ee}}{8}{}%
+\contentsline {table}{\numberline {9}{\ignorespaces Impact du fine-tuning sur les petites variantes Gemini 2.5, avec les m\^emes 29 cas de validation lorsqu'ils sont disponibles}}{8}{}%
+\contentsline {table}{\numberline {10}{\ignorespaces Premiers essais d'augmentation visuelle par objets dans le contexte textuel}}{10}{}%
+\contentsline {table}{\numberline {11}{\ignorespaces Comparaison des variantes Gemini 2.5 Pro: base, fine-tuning et entr\'ee vid\'eo directe}}{10}{}%
+\contentsline {table}{\numberline {12}{\ignorespaces Taxonomie initiale des \'echecs \`a valider dans l'analyse qualitative}}{11}{}%

@@ -1,0 +1,15 @@
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{Conditions compl\`etes sur 29 \'echantillons retenues pour les revendications principales}
+\label{tab:main-full-runs}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}>{\raggedright\arraybackslash}p{0.11\textwidth}rrrrrrr}
+\toprule
+Condition & Mod\`ele & Contexte & Txt IoU & Temp IoU & Score & Tokens & Run/video & Contexte/video & 1er passage/video \\
+\midrule
+Structured text & gemini-3.1-flash-lite & transcript-v1 & 0.388 & 0.257 & 0.323 & 2047 & 0.001 & 0.004 & 0.004 \\
+Structured text & grok-4.1-fast & typed-v1 & 0.372 & 0.230 & 0.301 & 11885 & 0.003 & 0.005 & 0.008 \\
+Direct video & gemini-3.1-flash-lite & video-direct-v1 & 0.338 & 0.208 & 0.273 & 29191 & 0.008 & 0.000 & 0.008 \\
+\bottomrule
+\end{tabularx}
+\end{table}

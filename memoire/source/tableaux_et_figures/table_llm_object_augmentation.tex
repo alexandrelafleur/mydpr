@@ -1,0 +1,15 @@
+\begin{table}[ht]
+\centering
+\footnotesize
+\caption{Premiers essais d'augmentation visuelle par objets dans le contexte textuel}
+\label{tab:llm-object-augmentation}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}Xrrrrr}
+\toprule
+Variante & n & IoU moy. & $\Delta$ vs texte & Car. entr\'ee & Temps (s) \\
+\midrule
+Texte seul & 29 & 0.369 & 0.000 & 5088 & 15.2 \\
+Texte + objets differentiels 7 s & 29 & 0.369 & 0.001 & 7009 & 15.7 \\
+Texte + objets complets 7 s & 29 & 0.343 & -0.026 & 7398 & 14.8 \\
+\bottomrule
+\end{tabularx}
+\end{table}

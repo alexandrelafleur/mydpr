@@ -1,0 +1,161 @@
+\providecommand{\ArticleDataPrefix}{source/tableaux_et_figures}
+
+\section{Introduction}
+
+Les synth\`eses de Tang et al. \cite{tang2023}, de Zhou et al. \cite{zhou2024} et de Wadekar et al. \cite{wadekar2024_evolution_of_multimodal_model_architectures}, ainsi que l'architecture Video-LLaMA \cite{anonymous2023_videollama}, montrent qu'analyser une vid\'eo longue directement avec un mod\`ele multimodal est aujourd'hui possible, mais co\^uteux. Si l'on veut traiter beaucoup de vid\'eos, ou si l'on veut le faire avec une machine limit\'ee, ce co\^ut devient rapidement un vrai probl\`eme. C'est encore plus vrai quand la t\^ache finale est simple \`a formuler: choisir un seul bon moment dans une vid\'eo de plusieurs minutes.
+
+Une premi\`ere solution consiste \`a ne garder que la transcription. C'est beaucoup moins cher, mais cela enl\`eve une partie de l'information utile. Un moment fort ne d\'epend pas seulement de ce qui est dit. Il peut d\'ependre d'un changement de sc\`ene, d'un cadrage, d'une personne qui appara\^\i t, d'une r\'eaction visuelle, ou d'un contraste entre le verbal et le visuel. \`A l'inverse, garder la vid\'eo jusqu'au bout laisse ce signal disponible, mais oblige \`a payer une inf\'erence plus lourde \`a chaque ex\'ecution.
+
+L'id\'ee de cet article est de prendre une voie interm\'ediaire. Au lieu de demander au mod\`ele final de raisonner directement sur la vid\'eo, nous transformons la vid\'eo en un \'etat textuel structur\'e. Cet \'etat garde l'ordre temporel, les sc\`enes, la parole et certains indices visuels. Ensuite, diff\'erentes vues textuelles peuvent \^etre d\'eriv\'ees de cet \'etat et envoy\'ees \`a un s\'electionneur textuel. La vue la plus compl\`ete est \texttt{timeline-scenes-dialogue-typed-v1}. D'autres vues plus simples, comme \texttt{transcript-v1} et \texttt{typed-novlm-v1}, permettent de voir ce que chaque niveau de repr\'esentation apporte vraiment.
+
+La contribution de l'article est donc triple. Nous pr\'esentons d'abord un jeu d'\'evaluation reproductible de 29 paires segment source / clip de r\'ef\'erence. Nous d\'ecrivons ensuite une cha\^\i ne de traitement qui transforme la vid\'eo en donn\'ees textuelles persistantes. Enfin, nous comparons plusieurs fa\c{c}ons d'utiliser ces donn\'ees, et nous montrons que des conditions texte d'abord d\'epassent l'entr\'ee vid\'eo directe sur le jeu d'\'evaluation retenu. Le point important n'est pas seulement qu'une repr\'esentation texte fonctionne. C'est qu'elle peut fonctionner tout en \'etant beaucoup plus facile \`a r\'eutiliser dans le temps.
+
+\begin{figure}[ht]
+\centering
+\ThesisBox{0.22\textwidth}{
+\textbf{1. Segment source}\\[0.4em]
+Vid\'eo longue \`a analyser, avec clip de r\'ef\'erence utilis\'e comme proxy du moment saillant.\\[0.6em]
+\textbf{Entr\'ee suivie:}\\
+dur\'ee source, rep\`eres GT, vid\'eo subset.
+}
+\ArrowSeparator
+\ThesisBox{0.22\textwidth}{
+\textbf{2. Extraction locale}\\[0.4em]
+Whisper, d\'ecoupage en sc\`enes, personnes visibles, locuteurs, focus cam\'era, typage de sc\`enes, r\'esum\'es VLM.\\[0.6em]
+\textbf{Sortie:}\\
+artefacts multimodaux persist\'es en SQLite.
+}
+\ArrowSeparator
+\ThesisBox{0.22\textwidth}{
+\textbf{3. Contexte structur\'e}\\[0.4em]
+Assemblage du script \texttt{typed-v1}:\\
+Detailed Visual Timeline\\
+Scenes\\
+Dialogue\\[0.6em]
+Ordre temporel et indices utiles rendus explicites.
+}
+\ArrowSeparator
+\ThesisBox{0.22\textwidth}{
+\textbf{4. LLM s\'electionneur}\\[0.4em]
+Prompt outill\'e qui choisit un seul span et renvoie un extrait verbal contigu.\\[0.6em]
+\textbf{Mesure:}\\
+Text IoU, Temporal IoU, score combin\'e.
+}
+\caption{Vue d'ensemble du pipeline propos\'e, depuis le segment source jusqu'au span final s\'electionn\'e.}
+\label{fig:pipeline-overview}
+\end{figure}
+
+\section{Travaux connexes}
+
+Le travail s'inscrit d'abord dans la litt\'erature sur la localisation temporelle et la d\'etection de moments saillants. Localizing Moments in Video with Natural Language \cite{anonymous2017_localizing}, ExCL \cite{ghosh2019_excl}, QVHighlights \cite{lei2021_moments} et Towards a Complete Benchmark on Video Moment Localization \cite{chae2024_benchmark} montrent qu'il faut non seulement trouver le bon passage, mais aussi bien le d\'eliminer dans le temps. Cette distinction est importante pour nous, parce qu'un bon extrait doit \^etre proche du clip de r\'ef\'erence \`a la fois dans son contenu et dans ses bornes temporelles.
+
+Le travail s'inscrit aussi dans la litt\'erature sur les grands mod\`eles vision-langage appliqu\'es aux vid\'eos longues. Video-LLaMA \cite{anonymous2023_videollama}, VTimeLLM \cite{huang2024_vtimeLLM}, VTG-LLM \cite{guo2024_vtgLLM}, LongVLM \cite{weng2024}, VideoLLM \cite{chen2023}, Retrieval-based Video Language Model for Efficient Long Video Question Answering \cite{xu2023} et LLMs Meet Long Video \cite{li2024} montrent bien qu'il est possible de raisonner sur des vid\'eos complexes avec des mod\`eles tr\`es puissants. Le probl\`eme, pour notre question, n'est pas qu'elles ne fonctionnent pas. Le probl\`eme est plut\^ot leur co\^ut et leur lourdeur lorsqu'on veut les utiliser souvent ou dans un syst\`eme contraint. Lost in the Middle \cite{liu2024_lost} renforce ce point en montrant que, m\^eme lorsque l'information tient dans un long contexte, elle n'est pas exploit\'ee de mani\`ere uniforme par le mod\`ele. Cela rend particuli\`erement importante la forme sous laquelle on pr\'esente l'information.
+
+Enfin, CLIPBERT \cite{lei2021_clipbert}, UMT \cite{liu2022_umt} et Slot-VLM \cite{xu2024} montrent qu'il est possible de compresser le signal vid\'eo avant la d\'ecision finale. Notre travail se situe dans cette direction, mais avec une diff\'erence importante: la repr\'esentation finale n'est pas cach\'ee dans le mod\`ele. Elle est lisible, stock\'ee en base et r\'eutilisable. C'est cette propri\'et\'e qui manque souvent dans les approches plus directes, et c'est elle que nous voulons mettre de l'avant ici.
+
+\section{Jeu d'\'evaluation et construction des donn\'ees}
+
+\input{\ArticleDataPrefix/table_dataset_stats.tex}
+
+Le jeu d'\'evaluation principal est \texttt{validation29}. Il contient 29 paires compos\'ees d'un segment source relativement long et d'un clip de r\'ef\'erence plus court provenant du m\^eme contenu. Les segments source durent en moyenne 320.5~s, alors que les clips de r\'ef\'erence durent 53.5~s en moyenne. Le but est simple: retrouver, dans le segment source, le passage le plus proche possible du clip de r\'ef\'erence.
+
+Ce choix a deux avantages. D'abord, il donne une t\^ache concr\`ete, proche d'un besoin r\'eel de d\'ecoupage. Ensuite, il permet de comparer plusieurs repr\'esentations sur exactement les m\^emes cas. Tout est stock\'e dans SQLite: les vid\'eos, les \'echantillons, les contextes, les profils de mod\`eles, les consignes, les ex\'ecutions, les co\^uts et les scores par cas. Cette structure est importante, parce qu'elle permet de refaire les tableaux, de revoir les it\'erations et de distinguer les essais rapides des comparaisons vraiment d\'efendables.
+
+\section{Cha\^\i ne de pr\'etraitement multimodal}
+
+La cha\^\i ne de traitement suit une logique simple. On commence par transcrire l'audio avec Whisper \cite{radford2023_whisper}. Ensuite, on d\'ecoupe la vid\'eo en sc\`enes et on ajoute plusieurs analyses visuelles: personnes visibles, visages, locuteur actif, cadrage et descriptions visuelles. Chaque \'etape produit des donn\'ees interm\'ediaires qui sont conserv\'ees en base.
+
+Le point important n'est pas seulement qu'il y a plusieurs modules. C'est que leurs sorties sont normalis\'ees dans une m\^eme structure. Cela permet de reconstruire plusieurs vues textuelles sans devoir tout recalculer. En pratique, la cha\^\i ne sert donc \`a fabriquer un \'etat vid\'eo textuel que l'on peut ensuite relire et transformer selon la t\^ache.
+
+\begin{table}[ht]
+\centering
+\caption{Composantes principales du pipeline et sorties persist\'ees}
+\label{tab:pipeline-components}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.20\textwidth} >{\raggedright\arraybackslash}p{0.34\textwidth} >{\raggedright\arraybackslash}X}
+\toprule
+Etape & R\^ole & Sorties utiles pour la repr\'esentation \\
+\midrule
+Whisper / diarization & Transcription et alignement de la parole & mots horodat\'es, segmentation des locuteurs \\
+Scene detection & D\'ecoupage temporel & bornes de sc\`enes \\
+YOLO / faces / ASD & Visages, activit\'e des locuteurs, association personnes & personnes visibles, locuteurs probables, activit\'e \\
+Scene classification & Typage A-roll / B-roll & type de sc\`ene et personnes visibles \\
+Camera focus & Indice de cadrage et continuit\'e & segments de focus cam\'era \\
+VLM summaries & Description visuelle textuelle & descriptions d'images, r\'esum\'es de sc\`enes \\
+TOON script & Repr\'esentation textuelle compacte & dialogue et structure sc\'enique utilisables par le s\'electionneur \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Repr\'esentation textuelle structur\'ee}
+
+\input{\ArticleDataPrefix/table_context_variants.tex}
+\input{\ArticleDataPrefix/figure_worked_example.tex}
+
+La vue la plus riche de cet \'etat est \texttt{timeline-scenes-dialogue-typed-v1}. Elle garde la chronologie, les sc\`enes, les blocs de dialogue et certains indices visuels. Ce n'est pas un r\'esum\'e libre. C'est une structure de travail. Le mod\`ele final peut y voir o\`u une sc\`ene commence, qui parle, qui est visible et quels indices visuels ressortent \`a ce moment-l\`a.
+
+Il faut bien distinguer deux choses. D'un c\^ot\'e, cette vue est celle qui repr\'esente le mieux l'\'etat complet de la vid\'eo. De l'autre, ce n'est pas elle qui donne le meilleur score dans toutes les comparaisons. C'est pr\'ecis\'ement pour cela que nous la comparons \`a d'autres vues. \texttt{typed-novlm-v1} garde la structure, mais enl\`eve les descriptions visuelles textuelles. \texttt{transcript-v1} garde seulement la parole. Cette famille de vues permet de voir plus clairement ce qui aide vraiment.
+
+\section{Configuration du s\'electionneur et m\'etriques d'\'evaluation}
+
+Les comparaisons sont organis\'ees en trois niveaux. Le premier niveau est exploratoire: il sert \`a tester rapidement des variantes de contexte et de consigne sur peu de cas. Le deuxi\`eme niveau regroupe les ex\'ecutions compl\`etes, qui servent aux conclusions principales. Le troisi\`eme niveau est une ablation contr\^ol\'ee sous \texttt{google/gemini-3.1-flash-lite-preview}, o\`u seule la repr\'esentation change.
+
+Dans cette ablation, quatre conditions sont compar\'ees: la transcription brute \texttt{transcript-v1}, la variante structur\'ee sans descriptions visuelles \texttt{typed-novlm-v1}, la variante structur\'ee avec descriptions visuelles \texttt{typed-v1}, et l'entr\'ee vid\'eo directe. Le mod\`ele s\'electionneur, la logique de sortie et le jeu d'\'evaluation restent les m\^emes. C'est ce qui permet d'isoler proprement l'effet de la repr\'esentation.
+
+L'\'evaluation repose sur deux mesures principales: le \emph{text IoU}, qui mesure le recouvrement textuel avec la r\'ef\'erence, et le \emph{temporal IoU}, qui mesure le recouvrement temporel. Le score combin\'e est la moyenne des deux. Nous rapportons aussi les co\^uts, \`a la fois pour le s\'electionneur seul et pour une premi\`ere ex\'ecution incluant la cr\'eation des donn\'ees lorsque cette \'etape existe.
+
+\section{R\'esultats quantitatifs}
+
+\input{\ArticleDataPrefix/table_exploratory_context_runs.tex}
+\input{\ArticleDataPrefix/table_exploratory_milestones.tex}
+\input{\ArticleDataPrefix/table_main_full_runs.tex}
+\input{\ArticleDataPrefix/table_controlled_gemini_ablation.tex}
+\input{\ArticleDataPrefix/table_llm_small_finetuning.tex}
+\input{\ArticleDataPrefix/table_llm_object_augmentation.tex}
+\input{\ArticleDataPrefix/table_llm_pro_variants.tex}
+
+Les r\'esultats se lisent en trois temps. Le premier est exploratoire. Il montre comment la repr\'esentation a \'evolu\'e. Les premi\`eres variantes tr\`es simples donnent des scores faibles. En structurant davantage la chronologie, les sc\`enes et le dialogue, les scores montent progressivement jusqu'\`a 0.528 sur cinq cas. Ce n'est pas une conclusion finale, mais c'est important pour comprendre pourquoi certaines repr\'esentations ont \'et\'e retenues et d'autres abandonn\'ees.
+
+Le deuxi\`eme temps est celui des ex\'ecutions compl\`etes. Sur \texttt{validation29}, le meilleur score complet observ\'e est obtenu par la transcription brute sous \texttt{Gemini 3.1 Flash Lite}, avec 0.323. La meilleure ex\'ecution compl\`ete de \texttt{typed-v1} atteint 0.301 sous \texttt{Grok 4.1 Fast}. L'entr\'ee vid\'eo directe sous \texttt{Gemini 3.1 Flash Lite} atteint 0.273. Ce que ces chiffres montrent, c'est d'abord qu'une approche texte d'abord est tout \`a fait viable. Ils montrent aussi que la vue la plus riche de l'\'etat vid\'eo n'est pas forc\'ement celle qui maximise le score brut du s\'electionneur.
+
+Le troisi\`eme temps est l'ablation contr\^ol\'ee sous Gemini. C'est elle qui permet de comprendre ce qui se passe vraiment. La transcription brute atteint 0.323. La variante structur\'ee sans descriptions visuelles atteint 0.315. L'entr\'ee vid\'eo directe reste \`a 0.273. Et la variante \texttt{typed-v1} avec descriptions visuelles textuelles descend \`a 0.240 lorsque l'\'echec d'alignement restant est compt\'e \`a z\'ero. La lecture la plus simple est donc la suivante: la structure temporelle et dialogu\'ee reste utile, mais les descriptions visuelles textuelles actuelles n'aident pas le s\'electionneur. Elles alourdissent plut\^ot le contexte sans gain net. Lost in the Middle \cite{liu2024_lost} va dans le m\^eme sens: ajouter de l'information ne suffit pas, encore faut-il que le mod\`ele sache la retrouver et l'utiliser au bon moment.
+
+Le co\^ut confirme cette lecture. Si l'on regarde seulement le s\'electionneur final, les approches textuelles co\^utent beaucoup moins cher que l'entr\'ee vid\'eo directe. Si l'on ajoute le co\^ut de cr\'eation des donn\'ees, la transcription brute reste la condition la plus \'economique sur une premi\`ere ex\'ecution, alors que les vues structur\'ees rejoignent l'ordre de grandeur de l'entr\'ee vid\'eo directe. Cela ne retire pas leur int\'er\^et. Cela veut dire que leur valeur devient surtout claire lorsqu'on r\'eutilise le m\^eme \'etat vid\'eo plusieurs fois.
+
+Une base historique compl\'ementaire, \texttt{test\_llms.db}, permet d'ajouter un autre angle d'analyse. Elle montre l'effet de l'ajustement fin sur plusieurs variantes Gemini, et elle est pertinente parce qu'elle a repr\'esent\'e un co\^ut amont d'environ 1000~USD en cr\'edits Google. Le cas le plus frappant est \texttt{Gemini 2.5 Flash}, qui passe d'environ 0.300 \`a 0.437 apr\`es ajustement fin texte. En revanche, \texttt{Flash-Lite} passe de 0.361 \`a 0.316. La conclusion propos\'ee est qu'il existe une limite de capacit\'e: \texttt{Flash-Lite} semble trop petit pour vraiment apprendre la t\^ache, alors que \texttt{Flash} semble \^etre au bon niveau de taille pour en b\'en\'eficier. SHED \cite{he2024_shed} va dans le m\^eme sens en montrant qu'un ajustement fin bien cibl\'e peut tirer beaucoup de valeur d'un ensemble de donn\'ees choisi avec soin plut\^ot que d'un volume maximal.
+
+Cette base permet aussi de voir l'effet d'un premier enrichissement par objets. Une variante diff\'erentielle reste presque neutre, alors qu'une variante plus lourde d\'egrade le score. Enfin, sur \texttt{Gemini 2.5 Pro}, le mod\`ele de base atteint 0.392, la version ajust\'ee sur le texte seul tombe \`a 0.363, et la version ajust\'ee avec texte et objets remonte \`a 0.405. La lecture la plus convaincante est donc la suivante: les grands mod\`eles profitent davantage d'un meilleur contexte que d'un ajustement fin trop \'etroit, alors que certains mod\`eles plus petits peuvent b\'en\'eficier d'un meilleur alignement. Revisiting Catastrophic Forgetting in Large Language Model Tuning \cite{li2024_forgetting} est coh\'erent avec cette baisse apr\`es ajustement fin texte seul, puisqu'il montre qu'une sp\'ecialisation trop serr\'ee peut d\'egrader des capacit\'es d\'ej\`a acquises lors de l'ajustement d'un grand mod\`ele.
+
+\section{Analyse des \'echecs et discussion}
+
+\input{\ArticleDataPrefix/figure_success_failure.tex}
+
+Les meilleurs cas montrent que les repr\'esentations textuelles peuvent vraiment porter un bon raisonnement. Quand la structure du contexte est bonne, le mod\`ele retrouve non seulement le bon sujet, mais aussi le bon moment.
+
+Les \'echecs, eux, suivent des motifs assez clairs. Il y a d'abord les cas o\`u le bon passage est trouv\'e de mani\`ere approximative, mais mal d\'elimit\'e dans le temps. Il y a ensuite les cas o\`u le mod\`ele choisit un passage voisin, plausible, mais moins bon que le bon moment. Enfin, il y a les cas o\`u la repr\'esentation est trop charg\'ee et o\`u les descriptions visuelles deviennent plus distractives qu'utiles.
+
+\begin{table}[ht]
+\centering
+\caption{Taxonomie initiale des \'echecs \`a valider dans l'analyse qualitative}
+\label{tab:failure-taxonomy}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.28\textwidth} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{0.22\textwidth}}
+\toprule
+Type d'\'echec & Description op\'erationnelle & Preuve attendue \\
+\midrule
+Mauvaise fronti\`ere temporelle & Le bon sujet est choisi, mais le span ne recouvre pas la r\'ef\'erence & IoU temporel faible avec similarit\'e textuelle non nulle \\
+Mauvais pic local & Le mod\`ele s'arr\^ete sur un segment voisin moins fort & Comparaison qualitative GT / pr\'ediction \\
+Signal visuel insuffisant & La transcription seule ou un contexte partiel manque un indice de mise en sc\`ene & Gain apr\`es ajout des r\'esum\'es visuels \\
+Biais dialogue-only & Le clip choisi est s\'emantiquement correct mais visuellement faible & Cas o\`u le texte est plausible sans appui visuel clair \\
+Sensibilit\'e au contexte & Le r\'esultat varie selon la forme du contexte plus que selon le contenu & Comparaison entre variantes de contexte \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Le point important est que ces \'echecs ne disent pas seulement \og il manque de l'information \fg{}. Ils montrent surtout que la forme de l'information compte. C'est exactement ce que la campagne sur l'ajustement fin vient renforcer. Le vrai probl\`eme n'est pas simplement d'avoir plus de contexte ou moins de contexte. Le vrai probl\`eme est de donner \`a chaque mod\`ele le type d'aide qu'il sait exploiter. Lost in the Middle \cite{liu2024_lost} va dans ce sens. Revisiting Catastrophic Forgetting in Large Language Model Tuning \cite{li2024_forgetting} y conduit aussi: un mod\`ele peut avoir acc\`es \`a plus d'information ou \^etre plus sp\'ecialis\'e, sans pour autant mieux s'en servir.
+
+\section{Conclusion}
+
+Cet article montre qu'une approche texte d'abord peut servir de support principal \`a la s\'election de moments saillants dans des vid\'eos longues. Sur \texttt{validation29}, plusieurs conditions textuelles font mieux que l'entr\'ee vid\'eo directe. Cela suffit d\'ej\`a \`a montrer qu'il n'est pas n\'ecessaire de garder toute l'inf\'erence multimodale jusqu'\`a la fin.
+
+Mais la conclusion la plus importante est ailleurs. Transformer la vid\'eo en un \'etat textuel structur\'e change la nature du probl\`eme. Au lieu de refaire une analyse lourde \`a chaque fois, on obtient une base de travail que l'on peut relire, comparer et r\'eutiliser. C'est cette id\'ee qui donne le plus de valeur \`a la repr\'esentation \texttt{typed-v1}, m\^eme si sa forme actuelle n'est pas encore optimale pour le s\'electionneur final.
+
+La suite logique du travail est donc claire. Il faut d'abord mieux choisir quel signal visuel vaut la peine d'\^etre textualis\'e. Il faut ensuite continuer \`a distinguer, selon la taille du mod\`ele, ce qui doit \^etre r\'egl\'e par le contexte et ce qui doit \^etre r\'egl\'e par l'ajustement fin. C'est \`a cette condition qu'une approche texte d'abord pourra vraiment devenir une solution robuste pour des syst\`emes contraints.

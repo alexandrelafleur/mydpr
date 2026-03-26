@@ -1,0 +1,30 @@
+\definecolor{MemoBlue}{HTML}{2F5D8A}
+\definecolor{MemoGreen}{HTML}{3D7A47}
+\definecolor{MemoOrange}{HTML}{B86A1E}
+\definecolor{MemoRed}{HTML}{A33A3A}
+
+\newcommand{\FigurePlaceholder}[2]{
+  \begin{figure}[ht]
+    \centering
+    \fbox{\parbox{0.88\textwidth}{
+      \textbf{Figure \`a produire.}\\
+      #2
+    }}
+    \caption{#1}
+  \end{figure}
+}
+\newcommand{\ThesisBox}[2]{%
+  \fcolorbox{black}{gray!5}{%
+    \parbox[t]{#1}{\raggedright\footnotesize #2}%
+  }%
+}
+\newcommand{\ArrowSeparator}{\hspace{0.4em}{\Large$\rightarrow$}\hspace{0.4em}}
+\newcommand{\TimelineBar}[4]{%
+  \noindent\textbf{#1}\par
+  \fcolorbox{black}{gray!10}{%
+    \parbox[c][1.4em][c]{0.95\linewidth}{%
+      \hspace*{#2\linewidth}%
+      {\color{#4}\rule{#3\linewidth}{0.9em}}%
+    }%
+  }%
+}

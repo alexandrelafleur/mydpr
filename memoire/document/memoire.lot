@@ -1,0 +1,24 @@
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {french}{}\relax 
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {1.1}{\ignorespaces Correspondance entre les contributions et les chapitres du m\'emoire}}{4}{}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Statistiques descriptives du benchmark \texttt {validation29}}}{18}{}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Composantes principales du pipeline et sorties persist\'ees}}{19}{}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Variantes de contexte disponibles sur l'ensemble complet}}{19}{}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Synth\`ese des pilotes exploratoires utilis\'es pour faire \'evoluer la repr\'esentation}}{21}{}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Jalons o\`u un changement de repr\'esentation ou de prompt am\'eliore le meilleur score exploratoire connu}}{22}{}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Conditions compl\`etes sur 29 \'echantillons retenues pour les revendications principales}}{22}{}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Comparaison contr\^ol\'ee sous Gemini 3.1 Flash Lite: m\^eme mod\`ele, m\^eme protocole de sortie, et variation explicite de la repr\'esentation d'entr\'ee}}{23}{}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces Impact du fine-tuning sur les petites variantes Gemini 2.5, avec les m\^emes 29 cas de validation lorsqu'ils sont disponibles}}{23}{}%
+\contentsline {table}{\numberline {4.9}{\ignorespaces Premiers essais d'augmentation visuelle par objets dans le contexte textuel}}{25}{}%
+\contentsline {table}{\numberline {4.10}{\ignorespaces Comparaison des variantes Gemini 2.5 Pro: base, fine-tuning et entr\'ee vid\'eo directe}}{25}{}%
+\contentsline {table}{\numberline {4.11}{\ignorespaces Taxonomie initiale des \'echecs \`a valider dans l'analyse qualitative}}{26}{}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }

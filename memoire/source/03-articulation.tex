@@ -1,0 +1,31 @@
+\chapter{Articulation du memoire combine}
+
+Ce chapitre sert \`a clarifier la structure du document. Le point important est simple: le coeur scientifique du travail tient dans un seul article, mais le m\'emoire reste n\'ecessaire pour expliquer d'o\`u vient la question, ce que l'article couvre, ce qu'il ne couvre pas, et pourquoi l'ensemble forme un seul projet coh\'erent.
+
+\section{Pourquoi un memoire combine centr\'e sur un seul article}
+
+Le format retenu est un m\'emoire combin\'e centr\'e sur un seul article. Ce choix vient directement de la nature du projet. Il n'y a pas ici plusieurs contributions ind\'ependantes qui justifieraient plusieurs articles distincts. Il y a une seule question centrale, un seul jeu d'\'evaluation principal, une seule cha\^\i ne de traitement et une seule famille de repr\'esentations \`a comparer. Tout cela forme un bloc scientifique unique.
+
+L'article suffit donc pour porter la preuve exp\'erimentale principale. Il permet de montrer comment la vid\'eo est transform\'ee en texte, comment cette repr\'esentation est utilis\'ee, et quels r\'esultats elle donne sur le jeu \texttt{validation29}. Le m\'emoire, de son c\^ot\'e, garde un r\^ole essentiel: il reprend la logique du DPR, situe le travail dans une perspective plus large de co\^ut et de ressources, et discute la port\'ee du projet au-del\`a de la seule exp\'erience centrale.
+
+\section{Lien entre l'article, l'infrastructure de repr\'esentation et l'application}
+
+L'article repose directement sur l'infrastructure du dossier \texttt{benchmark} dans \texttt{mecene-clips}. C'est l\`a que se trouvent le jeu d'\'evaluation, les contextes, les profils de mod\`eles, les ex\'ecutions et les co\^uts. Cette infrastructure n'est pas un simple d\'etail d'impl\'ementation. Elle fait partie de la contribution, parce qu'elle rend la comparaison reproductible et permet de suivre proprement les it\'erations qui ont men\'e \`a la repr\'esentation retenue.
+
+L'application \texttt{mecene-clips} joue un autre r\^ole. Elle montre que les choix faits pour le benchmark peuvent aussi vivre dans un produit. Cela donne du poids \`a l'id\'ee que la repr\'esentation construite est assez stable pour \^etre r\'eutilis\'ee dans un vrai syst\`eme logiciel. Il faut toutefois garder la distinction suivante: le benchmark sert \`a prouver scientifiquement quelque chose; l'application sert \`a montrer que ce quelque chose peut \^etre transf\'er\'e.
+
+\section{Ce que l'article couvre, et ce que le memoire ajoute}
+
+L'article couvre la partie la plus resserr\'ee du travail. Il pr\'esente le jeu d'\'evaluation, la cha\^\i ne de traitement, la repr\'esentation textuelle, le protocole de comparaison et les r\'esultats. Autrement dit, il r\'epond \`a la question: comment cette approche fonctionne-t-elle, et qu'est-ce qu'elle donne?
+
+Le m\'emoire ajoute ce que l'article, \`a lui seul, ne dirait pas assez bien. Il revient d'abord au DPR et \`a la question initiale de r\'eduction du co\^ut. Il explique ensuite pourquoi cette question est pertinente pour des syst\`emes contraints, notamment en robotique. Enfin, il discute ce que les r\'esultats permettent vraiment d'affirmer, les limites du jeu d'\'evaluation, et la place du transfert vers le produit.
+
+En bref, l'article porte la preuve centrale. Le m\'emoire porte la th\`ese g\'en\'erale du projet.
+
+\section{Etat actuel des preuves}
+
+L'\'etat actuel des preuves peut se lire assez simplement. D'abord, l'infrastructure est en place: le jeu \texttt{validation29} est stabilis\'e, les co\^uts sont centralis\'es dans la base, et les vues de rapport permettent de reg\'en\'erer les tableaux du m\'emoire. Ensuite, il y a tout le travail exploratoire. Il a servi \`a tester rapidement plusieurs repr\'esentations pour voir lesquelles m\'eritaient d'\^etre pouss\'ees plus loin.
+
+Les preuves principales viennent toutefois des ex\'ecutions compl\`etes et des ablations contr\^ol\'ees. Sur les ex\'ecutions 29/29, la transcription brute sous \texttt{Gemini 3.1 Flash Lite} atteint 0.323, la repr\'esentation \texttt{typed-v1} sous \texttt{Grok 4.1 Fast} atteint 0.301, et l'entr\'ee vid\'eo directe sous \texttt{Gemini 3.1 Flash Lite} atteint 0.273. Dans l'ablation contr\^ol\'ee sous Gemini, la variante \texttt{typed-novlm-v1} atteint 0.315, alors que la variante \texttt{typed-v1} avec descriptions visuelles textuelles tombe \`a 0.240 lorsque l'item non align\'e est compt\'e \`a z\'ero.
+
+Il faut ajouter \`a cela la base historique \texttt{test\_llms.db}. Elle ne remplace pas la preuve principale, mais elle ajoute une information importante sur l'ajustement fin. Elle montre que le d\'eplacement du calcul peut aussi se faire en amont, dans le mod\`ele lui-m\^eme, et que cette strat\'egie ne fonctionne pas de la m\^eme mani\`ere selon la taille du mod\`ele. C'est ce point qui reliera plus tard le m\'emoire \`a une lecture plus syst\`eme, et pas seulement \`a une lecture de benchmark.

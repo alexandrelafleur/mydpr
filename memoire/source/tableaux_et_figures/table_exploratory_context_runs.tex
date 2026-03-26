@@ -1,0 +1,24 @@
+\begin{table}[ht]
+\centering
+\footnotesize
+\caption{Synth\`ese des pilotes exploratoires utilis\'es pour faire \'evoluer la repr\'esentation}
+\label{tab:exploratory-context-runs}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}Xrrr}
+\toprule
+Contexte & Prompt pilote & Mod\`ele pilote & n pilote & Score combin\'e & n max \\
+\midrule
+transcript-v1 & transcript-selector-v1-tool-v1 & gemini-3.1-flash-lite & 1 & 0.301 & 1 \\
+scene-grouped-dialogue-script-v1 & selector-v2 & claude-sonnet-4.6 & 5 & 0.470 & 5 \\
+scene-grouped-v1 & selector-v2 & gpt-5.3-codex & 5 & 0.150 & 5 \\
+timeline-scenes-inline-v1 & selector-v2 & claude-sonnet-4.6 & 5 & 0.324 & 5 \\
+scenes-dialogue-inline-v1 & selector-v2 & claude-sonnet-4.6 & 5 & 0.434 & 5 \\
+timeline-dialogue-inline-v1 & selector-v2 & claude-sonnet-4.6 & 5 & 0.471 & 5 \\
+scene-details-dialogue-inline-v1 & selector-v2 & gemini-3.1-flash-lite & 5 & 0.333 & 5 \\
+typed-v1 & selector-v2 & gemini-3.1-flash-lite & 5 & 0.528 & 28 \\
+typed-numbered-v1 & selector-sentences-v1 & gemini-3.1-flash-lite & 5 & 0.308 & 5 \\
+typed-timestamps-v1 & selector-timestamps-v1 & claude-sonnet-4.6 (r:med) & 5 & 0.422 & 15 \\
+no-vlm-v1 & scenes-selector-tool-v1 & gemini-3.1-flash-lite & 24 & 0.343 & 24 \\
+typed-novlm-v1 & selector-v2-tool-v1 & gemini-3.1-flash-lite & 28 & 0.319 & 28 \\
+\bottomrule
+\end{tabularx}
+\end{table}

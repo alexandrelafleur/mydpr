@@ -1,0 +1,31 @@
+\chapter{PROBLÉMATIQUE}
+
+D’un côté, les méthodes classiques d'analyse automatisée des contenus vidéo reposent souvent sur des architectures multimodales complexes, intégrant à la fois des traitements visuels, audio et textuels. L’utilisation de grands modèles de langage multimodaux pour la tâche d’analyse vidéo demande des ressources computationnelles significatives, ce qui les rend peu accessibles, spécialement dans des contextes contraints par une capacité limitée de calcul ou de stockage comme les systèmes embarqués en robotique. Il serait important de développer une méthode d’analyse vidéo qui utilise moins de ressources pour faciliter son utilisation en contexte de robotique mobile.
+Parallèlement, la popularité des vidéos courtes tirées de longues vidéos, parfois appelées \textit{shorts}, porte à croire que les moments forts (ou saillants) d'une longue vidéo peuvent systématiquement être extraits et isolés comme particulièrement importants. Ce fait, d’apparence non relié au domaine de la robotique, est pourtant un aspect très important à ce projet de recherche. Ces clips extraits de longues vidéos se rapprochent beaucoup des moments intéressants du long flux vidéo que peut produire un robot muni de caméras. Si des données vidéos librement disponibles sur internet et libres de droits peuvent être transcrites au format textuel et utilisées pour entraîner et tester un grand modèle de langage pour la détection de moments forts, un des plus gros problèmes à l’entraînement de ces modèles, le nombre de données astronomique requis pour le faire n’est plus un enjeu.
+Donc, en combinant le besoin de méthodes moins énergivores pour l’analyse vidéo en robotique, et la disponibilité d’une base de données très similaire aux besoins de la détection de moments forts sur de longs flux vidéos en robotique, la question de recherche suivante émerge :
+
+Dans quelle mesure est-il possible de représenter fidèlement et exhaustivement le contenu d'une vidéo exclusivement par des descripteurs textuels, afin de permettre à un grand modèle de langage (LLM) d'identifier automatiquement les segments les plus saillants ?
+Cette question conduit à deux dimensions interdépendantes de la problématique :
+
+\textbf{1) La fidélité et l'exhaustivité de la représentation textuelle du contenu vidéo}
+
+La principale difficulté réside dans l'identification, puis dans l’octroiement des éléments pertinents à inclure dans la représentation : les actions visibles à l'écran, les dialogues entendus, l’ambiance sonore, les variations émotionnelles, les transitions entre les scènes ou tout autre élément contextuel. Aussi, une réflexion, et surtout une rétroaction, doit être menée sur la granularité optimale de cette représentation textuelle afin d'éviter une perte significative d'information tout en gardant une taille restreinte rester traitable par des modèles de langages avec une petite taille de contexte. 
+
+
+\textbf{2) La capacité du LLM à identifier les moments clés à partir d'une représentation strictement textuelle}
+
+Le modèle doit être en mesure de détecter des segments porteurs d'intérêt particulier (émotion, intensité narrative, action décisive) sans accès direct aux aspects visuels et sonores d'origine. Il faut alors avoir une façon d’entrainer et de valider le modèle pour cette tâche précise.
+
+
+Ce qui amène à l'objectif général du projet, qui consiste à vérifier la faisabilité et l'efficacité d'une représentation strictement textuelle des vidéos pour l'identification automatisée de segments clés par un LLM , et ses quatre sous-objectifs:
+
+1) Élaborer une représentation textuelle complète et structurée du contenu vidéo
+
+2) Évaluer la possibilité d’identifier les moments forts, à partir de cette représentation textuelle, d'un grand modèle de langage (LLM)
+
+3) Comparer objectivement les extraits sélectionnés par le modèle avec des extraits de référence.
+
+4) Optimiser progressivement la méthode de représentation textuelle et l'utilisation du modèle afin d'améliorer la concordance avec les références
+
+
+

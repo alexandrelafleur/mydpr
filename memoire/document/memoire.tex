@@ -1,0 +1,56 @@
+% Point d'entree canonique du memoire compile depuis le dossier document/.
+\documentclass[livre]{udes-genie-these}
+
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{color,soul}
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{xcolor}
+
+\input{../../article/source/article-shared-macros}
+\newcommand{\ArticleDataPrefix}{../source/tableaux_et_figures}
+
+\ConfigurationDocument
+{
+  langue = francais,
+  type = memoire,
+  programme = electrique,
+  lignes,
+  liste-figures,
+  liste-tableaux,
+  fichier-resume-francais = {../source/resume-francais},
+  fichier-resume-anglais = {../source/resume-anglais},
+  fichier-remerciements = {../source/remerciements},
+  fichier-acronymes = {../source/acronymes},
+  fichiers-references = {references},
+  auto-bib,
+  style-references = plain-fr,
+}
+
+\TitreFrancais{D\'ETECTION DES MOMENTS SAILLANTS D'UNE VID\'EO EN UTILISANT UNE REPR\'ESENTATION TEXTUELLE STRUCTUR\'EE}
+\TitreAnglais{Salient Moment Detection in Long Videos with a Structured Textual Representation}
+\Auteur{Alexandre}{LAFLEUR}
+\Date{Mars}{2026}
+\MotsClesFrancais{Intelligence artificielle, LLM, analyse vid\'eo, repr\'esentation textuelle, benchmark}
+\MotsClesAnglais{artificial intelligence, LLM, video analysis, textual representation, benchmark}
+
+\Directeur{Fran\c{c}ois}{GRONDIN}
+\Evaluateur{Fran\c{c}ois}{MICHAUD}
+\Evaluateur{Fran\c{c}ois}{FERLAND}
+
+\begin{document}
+
+\input{../source/01-introduction}
+\input{../source/02-etat-art}
+\input{../source/03-articulation}
+\input{../source/04-avant-propos}
+\input{../source/04-article-manuscript}
+\input{../source/05-discussion}
+\input{../source/06-conclusion}
+
+\end{document}

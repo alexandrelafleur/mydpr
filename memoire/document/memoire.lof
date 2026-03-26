@@ -1,0 +1,16 @@
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {french}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Vue d'ensemble du pipeline propos\'e, depuis le segment source jusqu'au span final s\'electionn\'e.}}{17}{}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Exemple concret de transformation d'une vid\'eo en contexte structur\'e, puis en span s\'electionn\'e par le mod\`ele.}}{20}{}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Comparaison de deux cas de succ\`es et de deux cas d'\'echec du meilleur run structur\'e complet. Les succ\`es combinent recouvrement th\'ematique et calibration temporelle; les \'echecs gardent parfois un signal s\'emantique partiel mais ratent la bonne fen\^etre temporelle.}}{24}{}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Positionnement respectif du DPR, de l'article central et du transfert vers l'application de production.}}{29}{}%
+\addvspace {10\p@ }

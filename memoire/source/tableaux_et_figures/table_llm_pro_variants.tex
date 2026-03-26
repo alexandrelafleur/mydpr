@@ -1,0 +1,16 @@
+\begin{table}[ht]
+\centering
+\footnotesize
+\caption{Comparaison des variantes Gemini 2.5 Pro: base, fine-tuning et entr\'ee vid\'eo directe}
+\label{tab:llm-pro-variants}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}Xrrrrr}
+\toprule
+Variante & n & IoU moy. & $\Delta$ vs base & Temps (s) & Co\^ut / 100 vid. \\
+\midrule
+Pro de base & 29 & 0.392 & 0.000 & 22.1 & 0.841 \\
+Pro fine-tune texte & 29 & 0.363 & -0.028 & 26.3 & 0.879 \\
+Pro fine-tune texte + objets & 29 & 0.405 & 0.013 & 23.6 & 0.879 \\
+Pro entree video directe & 28 & 0.358 & -0.033 & 45.6 & cout non journalise \\
+\bottomrule
+\end{tabularx}
+\end{table}

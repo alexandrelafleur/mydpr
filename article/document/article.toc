@@ -1,0 +1,14 @@
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{1}{}%
+\contentsline {section}{\numberline {2}Travaux connexes}{1}{}%
+\contentsline {section}{\numberline {3}Jeu d'\'evaluation et construction des donn\'ees}{2}{}%
+\contentsline {section}{\numberline {4}Cha\^\i ne de pr\'etraitement multimodal}{3}{}%
+\contentsline {section}{\numberline {5}Repr\'esentation textuelle structur\'ee}{3}{}%
+\contentsline {section}{\numberline {6}Configuration du s\'electionneur et m\'etriques d'\'evaluation}{4}{}%
+\contentsline {section}{\numberline {7}R\'esultats quantitatifs}{5}{}%
+\contentsline {section}{\numberline {8}Analyse des \'echecs et discussion}{8}{}%
+\contentsline {section}{\numberline {9}Conclusion}{8}{}%
+\contentsline {chapter}{LISTE DES RÉFÉRENCES}{13}{}%

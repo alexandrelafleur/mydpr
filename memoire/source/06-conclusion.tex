@@ -1,0 +1,29 @@
+\chapter{Conclusion generale}
+
+La question de d\'epart du m\'emoire \'etait la suivante: est-ce qu'une vid\'eo longue peut \^etre repr\'esent\'ee sous forme textuelle de mani\`ere assez bonne pour qu'un mod\`ele textuel puisse en extraire un moment saillant, tout en co\^utant moins cher qu'une approche multimodale directe? Les travaux r\'ealis\'es permettent maintenant de r\'epondre oui, mais avec une nuance importante sur le type de repr\'esentation qui aide vraiment.
+
+\section{R\'eponse \`a la question de recherche}
+
+La r\'eponse g\'en\'erale est positive. Sur \texttt{validation29}, plusieurs conditions textuelles d\'epassent l'entr\'ee vid\'eo directe. Cela veut dire qu'il n'est pas n\'ecessaire, pour cette t\^ache, de garder toute l'analyse vid\'eo multimodale jusqu'au dernier moment. Une approche texte d'abord peut suffire.
+
+La nuance importante est la suivante. Ce n'est pas simplement \og plus la repr\'esentation est riche, mieux c'est \fg{}. Dans l'\'etat actuel du syst\`eme, la transcription brute est la meilleure condition contr\^ol\'ee, la variante structur\'ee sans descriptions visuelles suit de pr\`es, et la textualisation visuelle actuelle ne semble pas aider. Donc le vrai message n'est pas seulement qu'une repr\'esentation texte fonctionne. C'est qu'il faut bien choisir ce que l'on met dans cette repr\'esentation.
+
+Il faut ajouter une deuxi\`eme nuance. La valeur de la repr\'esentation structur\'ee ne se limite pas \`a son score brut. Elle tient aussi au fait qu'elle produit un \'etat persistant de la vid\'eo, que l'on peut conserver, relire et r\'eutiliser. C'est ce qui rend l'approche int\'eressante dans une logique syst\`eme, surtout si la m\^eme vid\'eo doit ensuite servir \`a plusieurs traitements.
+
+Enfin, la campagne compl\'ementaire sur l'ajustement fin montre que le probl\`eme ne se r\'esume pas \`a choisir entre texte et vid\'eo. Selon la taille du mod\`ele, il peut \^etre plus intelligent de d\'eplacer une partie du calcul dans l'ajustement fin, ou au contraire de garder un mod\`ele plus g\'en\'eral et de lui fournir un meilleur contexte. \texttt{Flash-Lite} semble trop petit pour en tirer un vrai gain. \texttt{Flash} semble \^etre au bon niveau de capacit\'e. \texttt{Pro}, lui, profite surtout d'un contexte plus riche.
+
+\section{Contributions valid\'ees par le m\'emoire}
+
+Le m\'emoire valide d'abord une id\'ee simple mais importante: une approche texte d'abord peut rester comp\'etitive pour la s\'election de moments saillants dans des vid\'eos longues. Il valide ensuite la cha\^\i ne qui permet d'arriver \`a ce r\'esultat: transcription, structuration temporelle, enrichissement visuel contr\^ol\'e, stockage en base et comparaison reproductible.
+
+Le m\'emoire valide aussi une contribution plus large que pr\'evu au d\'epart. En construisant cette repr\'esentation, le projet ne produit pas seulement un contexte pour un mod\`ele. Il produit une base textuelle de la vid\'eo. Cela ouvre la porte \`a une logique de r\'eutilisation que l'entr\'ee vid\'eo directe ne permet pas aussi facilement.
+
+Enfin, le travail valide une mani\`ere plus rigoureuse de suivre les it\'erations. Le jeu d'\'evaluation, la base SQLite, les vues de rapport et les tableaux g\'en\'er\'es permettent de distinguer proprement ce qui rel\`eve de l'exploration rapide, de la comparaison principale et du diagnostic plus fin. Cela compte, parce que la qualit\'e de la repr\'esentation est justement le coeur scientifique du projet.
+
+\section{Perspectives}
+
+La suite la plus directe consiste \`a mieux choisir l'information visuelle \`a transmettre. Les r\'esultats actuels montrent qu'ajouter du texte visuel ne suffit pas. Il faut plut\^ot trouver quelle information visuelle aide vraiment le mod\`ele, et sous quelle forme.
+
+La deuxi\`eme perspective consiste \`a exploiter davantage la repr\'esentation comme \'etat persistant. Une fois qu'une vid\'eo a \'et\'e transform\'ee en structure textuelle, elle peut servir \`a plusieurs t\^aches, pas seulement \`a choisir un clip. C'est probablement l\`a que la valeur pratique de l'approche deviendra la plus forte.
+
+La troisi\`eme perspective est de revenir encore plus pr\`es de la motivation initiale du DPR. Il faudra tester cette logique sur des donn\'ees plus proches de la robotique et des syst\`emes embarqu\'es, o\`u les contraintes de calcul sont encore plus fortes et o\`u l'information utile n'est pas toujours principalement verbale. Si l'approche reste bonne dans ce contexte, alors le projet aura vraiment montr\'e qu'une repr\'esentation textuelle peut devenir une alternative cr\'edible \`a l'analyse vid\'eo directe dans des syst\`emes contraints.

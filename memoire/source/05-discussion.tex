@@ -1,0 +1,75 @@
+\chapter{Discussion generale et transfert}
+
+Le chapitre pr\'ec\'edent montrait les r\'esultats. Le but ici est de revenir \`a la logique du projet. Il faut voir ce que ces r\'esultats confirment par rapport au DPR, ce qu'ils ne permettent pas encore d'affirmer, et ce qu'ils changent dans la mani\`ere de penser une analyse vid\'eo avec peu de ressources.
+
+\section{Retour sur le DPR}
+
+Le DPR partait d'une intuition simple: au lieu de faire raisonner directement un mod\`ele multimodal lourd sur la vid\'eo, il devrait \^etre possible de transformer la vid\'eo en texte, puis de confier l'analyse finale \`a un mod\`ele textuel moins co\^uteux. Le travail r\'ealis\'e confirme que cette intuition allait dans la bonne direction.
+
+En m\^eme temps, la recherche a clarifi\'e cette intuition. Le projet n'a pas seulement produit une repr\'esentation texte. Il a produit un jeu d'\'evaluation, une base de donn\'ees de suivi, une estimation des co\^uts, et plusieurs vues textuelles qui permettent de comprendre ce qui aide r\'eellement le mod\`ele final. C'est important, parce que cela transforme une intuition de faisabilit\'e en une comparaison mesurable.
+
+\section{Port\'ee des r\'esultats actuels}
+
+La premi\`ere chose \`a garder en t\^ete est que tous les r\'esultats de la base n'ont pas la m\^eme valeur. Les essais sur un ou cinq cas ont servi \`a it\'erer rapidement. Ils sont utiles pour raconter le cheminement, mais ils ne doivent pas porter les conclusions principales. Les conclusions principales viennent des ex\'ecutions compl\`etes et des ablations contr\^ol\'ees.
+
+Sur cette base, trois points ressortent clairement. D'abord, l'approche texte d'abord fonctionne. Sur \texttt{validation29}, la transcription brute et la variante structur\'ee sans descriptions visuelles d\'epassent l'entr\'ee vid\'eo directe dans la comparaison contr\^ol\'ee sous Gemini. Ensuite, la repr\'esentation \texttt{typed-v1} reste importante, non parce qu'elle serait la meilleure partout, mais parce qu'elle repr\'esente la vue la plus riche et la plus r\'eutilisable de l'\'etat vid\'eo. Enfin, la textualisation visuelle actuelle ne semble pas aider. Dans sa forme actuelle, elle ajoute surtout du bruit et du co\^ut. Lost in the Middle \cite{liu2024_lost} est coh\'erent avec cette lecture, puisqu'il montre que les longs contextes ne sont pas exploit\'es uniform\'ement par les mod\`eles lorsque l'information pertinente est noy\'ee dans une grande quantit\'e de texte.
+
+Le point sur les co\^uts demande une lecture un peu plus nuanc\'ee. Si l'on regarde seulement l'appel final au s\'electionneur, les approches textuelles co\^utent beaucoup moins cher que l'entr\'ee vid\'eo directe. Si l'on ajoute le co\^ut de cr\'eation des donn\'ees sur une premi\`ere ex\'ecution, la transcription brute reste la meilleure affaire, alors que les vues structur\'ees reviennent \`a peu pr\`es dans le m\^eme ordre de grandeur que l'entr\'ee vid\'eo directe. Cela veut dire que l'int\'er\^et des vues structur\'ees appara\^\i t surtout quand on r\'eutilise la m\^eme repr\'esentation plusieurs fois.
+
+\section{Enseignements compl\'ementaires sur l'ajustement fin}
+
+La base \texttt{test\_llms.db} ajoute un deuxi\`eme message important. Elle montre que le calcul peut \^etre d\'eplac\'e non seulement dans la repr\'esentation, mais aussi dans l'ajustement fin du mod\`ele. Autrement dit, au lieu de payer plus cher \`a chaque inf\'erence, on peut parfois payer en amont pour mieux aligner un mod\`ele moins co\^uteux sur la t\^ache.
+
+Le cas le plus parlant est \texttt{Gemini 2.5 Flash}. Il part bas, autour de 0.300, puis monte \`a 0.437 apr\`es ajustement fin texte. Cela sugg\`ere que ce mod\`ele a la bonne taille pour apprendre une t\^ache pr\'ecise sans perdre sa capacit\'e utile de g\'en\'eralisation. SHED \cite{he2024_shed} va dans le m\^eme sens, puisqu'il montre qu'un ajustement fin peut gagner beaucoup en efficacit\'e lorsque les donn\'ees sont bien choisies et bien calibr\'ees pour la t\^ache.
+
+Le cas de \texttt{Flash-Lite} montre la limite. Lui ne s'am\'eliore pas. Il baisse m\^eme apr\`es ajustement fin. La conclusion qui en ressort est qu'il y a un seuil de capacit\'e sous lequel un mod\`ele reste trop petit pour vraiment apprendre ce qu'on lui demande, m\^eme si on essaie de le sp\'ecialiser.
+
+Le cas de \texttt{Gemini 2.5 Pro} montre l'autre extr\^eme. Le mod\`ele de base est d\'ej\`a fort. Quand on l'ajuste seulement sur le texte, il perd. Quand on lui ajoute plut\^ot un contexte plus riche avec des objets, il remonte. Cela sugg\`ere qu'un grand mod\`ele profite plus d'un meilleur contexte que d'un ajustement fin trop \'etroit. Dit autrement: plus un mod\`ele est gros, plus sa force semble \^etre de raisonner sur plusieurs possibilit\'es; trop le contraindre peut donc lui enlever une partie de cet avantage. Revisiting Catastrophic Forgetting in Large Language Model Tuning \cite{li2024_forgetting} est compatible avec cette interpr\'etation.
+
+\section{Lien avec l'application de production}
+
+Le transfert vers \texttt{mecene-clips} est important, mais il faut bien dire ce qu'il montre et ce qu'il ne montre pas. Il montre que les repr\'esentations et la logique de s\'election construites dans le benchmark sont assez stables pour \^etre reprises dans une application r\'eelle. C'est une bonne indication que le travail ne tient pas seulement dans un contexte de laboratoire.
+
+Par contre, ce transfert ne remplace pas la preuve scientifique. Une application de production doit surtout arbitrer entre latence, robustesse, maintenance et exp\'erience utilisateur. Le benchmark, lui, sert \`a comparer proprement des conditions et \`a mesurer ce qu'elles co\^utent. Il faut donc lire le transfert comme une preuve de pertinence pratique, pas comme une seconde preuve exp\'erimentale.
+
+\begin{figure}[ht]
+\centering
+\ThesisBox{0.28\textwidth}{
+\textbf{Question du DPR}\\[0.4em]
+Hypoth\`ese de d\'epart: une repr\'esentation textuelle peut-elle remplacer une lecture vid\'eo plus lourde pour rep\'erer les moments saillants?\\[0.6em]
+\textbf{Type de preuve:}\\
+probl\'ematisation et objectifs.
+}
+\ArrowSeparator
+\ThesisBox{0.28\textwidth}{
+\textbf{Article central + benchmark}\\[0.4em]
+Validation scientifique sur \texttt{validation29}, comparaison entre contexte structur\'e, ablation et baseline directe, avec mesures reproductibles.\\[0.6em]
+\textbf{Type de preuve:}\\
+preuve exp\'erimentale principale.
+}
+\ArrowSeparator
+\ThesisBox{0.28\textwidth}{
+\textbf{Transfert vers \texttt{mecene-clips}}\\[0.4em]
+R\'eutilisation du pipeline et de la logique de structuration dans une cha\^\i ne de produit consommateur.\\[0.6em]
+\textbf{Type de preuve:}\\
+validation de transfert et pertinence pratique.
+}
+\caption{Positionnement respectif du DPR, de l'article central et du transfert vers l'application de production.}
+\label{fig:thesis-positioning}
+\end{figure}
+
+\section{Limites et menaces a la validit\'e}
+
+La premi\`ere limite est la taille du jeu d'\'evaluation. Vingt-neuf paires suffisent pour faire ressortir des tendances nettes, mais pas pour couvrir toute la diversit\'e des vid\'eos longues. La deuxi\`eme limite est le domaine lui-m\^eme. On reste proche du d\'ecoupage de clips grand public, ce qui est coh\'erent avec l'application vis\'ee, mais ne couvre pas encore tous les cas plus difficiles que l'on pourrait trouver en robotique ou en perception embarqu\'ee.
+
+Une autre limite importante vient de la forme actuelle du signal visuel textuel. L'ablation montre qu'il n'aide pas dans l'\'etat pr\'esent du syst\`eme. Cela ne veut pas dire qu'aucun signal visuel textuel ne pourra aider. Cela veut dire que cette mani\`ere pr\'ecise de le produire et de l'injecter n'est pas encore la bonne.
+
+Enfin, la campagne sur l'ajustement fin est tr\`es informative, mais elle reste une campagne compl\'ementaire sur une base historique distincte. Elle renforce une lecture syst\`eme du travail, sans changer la preuve principale, qui reste celle du jeu \texttt{validation29}.
+
+\section{Travaux futurs}
+
+La priorit\'e la plus directe est de mieux choisir le signal visuel \`a transmettre. Le r\'esultat actuel montre assez clairement que la solution n'est pas de mettre plus de descriptions. Il faut plut\^ot trouver quelles informations visuelles sont vraiment utiles \`a la d\'ecision finale.
+
+Le deuxi\`eme axe est de mieux exploiter l'id\'ee d'\'etat persistant. Une fois la vid\'eo transform\'ee en donn\'ees textuelles structur\'ees, on peut s'en servir pour autre chose que choisir un seul moment: annotation, recherche, r\'evision, ou aide au montage. C'est l\`a que l'amortissement du co\^ut de pr\'eparation devient vraiment int\'eressant.
+
+Le troisi\`eme axe est plus proche de la motivation initiale du projet. Il faudra tester cette m\^eme logique sur des donn\'ees moins proches du d\'ecoupage de clips et plus proches de la robotique, o\`u le signal verbal est parfois faible et o\`u l'information importante peut \^etre davantage visuelle ou contextuelle. C'est \`a ce moment-l\`a qu'on pourra vraiment mesurer jusqu'o\`u l'approche texte d'abord reste valide.

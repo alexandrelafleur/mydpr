@@ -1,0 +1,16 @@
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{Comparaison contr\^ol\'ee sous Gemini 3.1 Flash Lite: m\^eme mod\`ele, m\^eme protocole de sortie, et variation explicite de la repr\'esentation d'entr\'ee}
+\label{tab:controlled-gemini-ablation}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.21\textwidth}>{\raggedright\arraybackslash}p{0.24\textwidth}rrrrrrr}
+\toprule
+Condition & Couverture & Txt IoU & Temp IoU & Score & Tokens & Run/video & Contexte/video & 1er passage/video \\
+\midrule
+Structured text + VLM & 29 cas (1 échec d'alignement compté à 0) & 0.310 & 0.170 & 0.240 & 10053 & 0.003 & 0.005 & 0.008 \\
+Structured text sans VLM & 29 cas (28 run principal + 1 retry ciblé) & 0.382 & 0.248 & 0.315 & 4433 & 0.001 & 0.005 & 0.007 \\
+Transcript brut & 29 cas (run complet) & 0.388 & 0.257 & 0.323 & 2047 & 0.001 & 0.004 & 0.004 \\
+Entrée vidéo directe & 29 cas (run complet) & 0.338 & 0.208 & 0.273 & 29191 & 0.008 & 0.000 & 0.008 \\
+\bottomrule
+\end{tabularx}
+\end{table}

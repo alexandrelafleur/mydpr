@@ -1,0 +1,251 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname fonteauteurs\endcsname\relax
+\def\fonteauteurs{\scshape}\fi
+
+\bibitem{chae2024_benchmark}
+J.~\bgroup\fonteauteurs\bgroup Chae\egroup\egroup{},
+  D.~\bgroup\fonteauteurs\bgroup Kim\egroup\egroup{},
+  K.~\bgroup\fonteauteurs\bgroup Kim\egroup\egroup{},
+  D.~\bgroup\fonteauteurs\bgroup Lee\egroup\egroup{},
+  S.~\bgroup\fonteauteurs\bgroup Lee\egroup\egroup{},
+  S.~\bgroup\fonteauteurs\bgroup Ha\egroup\egroup{},
+  J.~\bgroup\fonteauteurs\bgroup Mun\egroup\egroup{},
+  W.~\bgroup\fonteauteurs\bgroup Kang\egroup\egroup{},
+  B.~\bgroup\fonteauteurs\bgroup Roh\egroup\egroup{} et
+  J.~\bgroup\fonteauteurs\bgroup Lee\egroup\egroup{} :
+\newblock Towards a complete benchmark on video moment localization.
+\newblock \emph{In} {\em Proceedings of the International Conference on
+  Artificial Intelligence and Statistics}, volume 238, pages 4168--4176.
+  Machine Learning Research, 2024.
+
+\bibitem{chen2023}
+G.~\bgroup\fonteauteurs\bgroup Chen\egroup\egroup{}, Y.-D.
+  \bgroup\fonteauteurs\bgroup Zheng\egroup\egroup{},
+  J.~\bgroup\fonteauteurs\bgroup Wang\egroup\egroup{},
+  J.~\bgroup\fonteauteurs\bgroup Xu\egroup\egroup{},
+  Y.~\bgroup\fonteauteurs\bgroup Huang\egroup\egroup{},
+  J.~\bgroup\fonteauteurs\bgroup Pan\egroup\egroup{},
+  Y.~\bgroup\fonteauteurs\bgroup Wang\egroup\egroup{},
+  Y.~\bgroup\fonteauteurs\bgroup Wang\egroup\egroup{},
+  Y.~\bgroup\fonteauteurs\bgroup Qiao\egroup\egroup{},
+  T.~\bgroup\fonteauteurs\bgroup Lu\egroup\egroup{} et
+  L.~\bgroup\fonteauteurs\bgroup Wang\egroup\egroup{} :
+\newblock Video{LLM}: Modeling video sequence with large language models.
+\newblock {\em arXiv preprint}, arXiv:2305.13292, 2023.
+
+\bibitem{ghosh2019_excl}
+S.~\bgroup\fonteauteurs\bgroup Ghosh\egroup\egroup{},
+  A.~\bgroup\fonteauteurs\bgroup Agarwal\egroup\egroup{},
+  Z.~\bgroup\fonteauteurs\bgroup Parekh\egroup\egroup{} et
+  A.~\bgroup\fonteauteurs\bgroup Hauptmann\egroup\egroup{} :
+\newblock Excl: Extractive clip localization using natural language
+  descriptions.
+\newblock \emph{In} {\em Proceedings of the Conference of the North American
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies, Volume 1}, pages 1984--1990. Association for Computational
+  Linguistics, 2019.
+
+\bibitem{guo2024_vtgLLM}
+Y.~\bgroup\fonteauteurs\bgroup Guo\egroup\egroup{},
+  J.~\bgroup\fonteauteurs\bgroup Liu\egroup\egroup{},
+  M.~\bgroup\fonteauteurs\bgroup Li\egroup\egroup{},
+  X.~\bgroup\fonteauteurs\bgroup Tang\egroup\egroup{},
+  X.~\bgroup\fonteauteurs\bgroup Chen\egroup\egroup{} et
+  B.~\bgroup\fonteauteurs\bgroup Zhao\egroup\egroup{} :
+\newblock Vtg-{LLM}: Integrating timestamp knowledge into video {LLM}s for
+  enhanced video temporal grounding.
+\newblock {\em arXiv preprint arXiv:2405.13382}, 2024.
+
+\bibitem{he2024_shed}
+Y.~\bgroup\fonteauteurs\bgroup He\egroup\egroup{},
+  Z.~\bgroup\fonteauteurs\bgroup Wang\egroup\egroup{},
+  Z.~\bgroup\fonteauteurs\bgroup Shen\egroup\egroup{},
+  G.~\bgroup\fonteauteurs\bgroup Sun\egroup\egroup{},
+  Y.~\bgroup\fonteauteurs\bgroup Dai\egroup\egroup{},
+  Y.~\bgroup\fonteauteurs\bgroup Wu\egroup\egroup{},
+  H.~\bgroup\fonteauteurs\bgroup Wang\egroup\egroup{} et
+  A.~\bgroup\fonteauteurs\bgroup Li\egroup\egroup{} :
+\newblock Shed: Shapley-based automated dataset refinement for instruction
+  fine-tuning.
+\newblock \emph{In} {\em Advances in Neural Information Processing Systems},
+  2024.
+
+\bibitem{anonymous2017_localizing}
+L.~A. \bgroup\fonteauteurs\bgroup Hendricks\egroup\egroup{},
+  O.~\bgroup\fonteauteurs\bgroup Wang\egroup\egroup{},
+  E.~\bgroup\fonteauteurs\bgroup Shechtman\egroup\egroup{},
+  J.~\bgroup\fonteauteurs\bgroup Sivic\egroup\egroup{},
+  T.~\bgroup\fonteauteurs\bgroup Darrell\egroup\egroup{} et
+  B.~\bgroup\fonteauteurs\bgroup Russell\egroup\egroup{} :
+\newblock Localizing moments in video with natural language.
+\newblock \emph{In} {\em Proceedings of the IEEE International Conference on
+  Computer Vision}, pages 5804--5813, 2017.
+
+\bibitem{huang2024_vtimeLLM}
+B.~\bgroup\fonteauteurs\bgroup Huang\egroup\egroup{},
+  X.~\bgroup\fonteauteurs\bgroup Wang\egroup\egroup{},
+  H.~\bgroup\fonteauteurs\bgroup Chen\egroup\egroup{},
+  Z.~\bgroup\fonteauteurs\bgroup Song\egroup\egroup{} et
+  W.~\bgroup\fonteauteurs\bgroup Zhu\egroup\egroup{} :
+\newblock Vtime{LLM}: Empower {LLM} to grasp video moments.
+\newblock \emph{In} {\em Proceedings of the IEEE/CVF Conference on Computer
+  Vision and Pattern Recognition}, pages 14271--14280, 2024.
+
+\bibitem{lei2021_moments}
+M.~Bansal \bgroup\fonteauteurs\bgroup J.~Lei\egroup\egroup{}, T. L.~Berg :
+\newblock Qvhighlights: Detecting moments and highlights in videos via natural
+  language queries.
+\newblock \emph{In} {\em Proceedings of the International Conference on Neural
+  Information Processing Systems}, pages 11846--11858. Neural Information
+  Processing Systems, 2021.
+
+\bibitem{lei2021_clipbert}
+J.~\bgroup\fonteauteurs\bgroup Lei\egroup\egroup{},
+  L.~\bgroup\fonteauteurs\bgroup Li\egroup\egroup{},
+  L.~\bgroup\fonteauteurs\bgroup Zhou\egroup\egroup{},
+  Z.~\bgroup\fonteauteurs\bgroup Gan\egroup\egroup{}, T.~L.
+  \bgroup\fonteauteurs\bgroup Berg\egroup\egroup{},
+  M.~\bgroup\fonteauteurs\bgroup Bansal\egroup\egroup{} et
+  J.~\bgroup\fonteauteurs\bgroup Liu\egroup\egroup{} :
+\newblock Less is more: {CLIPBERT} for video-and-language learning via sparse
+  sampling.
+\newblock \emph{In} {\em Proceedings of the IEEE/CVF Conference on Computer
+  Vision and Pattern Recognition}, pages 7327--7337, 2021.
+
+\bibitem{li2024_forgetting}
+H.~\bgroup\fonteauteurs\bgroup Li\egroup\egroup{},
+  L.~\bgroup\fonteauteurs\bgroup Ding\egroup\egroup{},
+  M.~\bgroup\fonteauteurs\bgroup Fang\egroup\egroup{} et
+  D.~\bgroup\fonteauteurs\bgroup Tao\egroup\egroup{} :
+\newblock Revisiting catastrophic forgetting in large language model tuning.
+\newblock \emph{In} {\em Findings of the Association for Computational
+  Linguistics: EMNLP 2024}, pages 4297--4308. Association for Computational
+  Linguistics, 2024.
+
+\bibitem{li2024}
+Y.~\bgroup\fonteauteurs\bgroup Li\egroup\egroup{},
+  X.~\bgroup\fonteauteurs\bgroup Chen\egroup\egroup{},
+  B.~\bgroup\fonteauteurs\bgroup Hu\egroup\egroup{} et
+  M.~\bgroup\fonteauteurs\bgroup Zhang\egroup\egroup{} :
+\newblock {LLM}s meet long video: Advancing long video question answering with
+  an interactive visual adapter in {LLM}s.
+\newblock {\em arXiv preprint}, arXiv:2402.13546, 2024.
+
+\bibitem{liu2024_lost}
+N.~F. \bgroup\fonteauteurs\bgroup Liu\egroup\egroup{},
+  K.~\bgroup\fonteauteurs\bgroup Lin\egroup\egroup{},
+  J.~\bgroup\fonteauteurs\bgroup Hewitt\egroup\egroup{},
+  A.~\bgroup\fonteauteurs\bgroup Paranjape\egroup\egroup{},
+  M.~\bgroup\fonteauteurs\bgroup Bevilacqua\egroup\egroup{},
+  F.~\bgroup\fonteauteurs\bgroup Petroni\egroup\egroup{} et
+  P.~\bgroup\fonteauteurs\bgroup Liang\egroup\egroup{} :
+\newblock Lost in the middle: How language models use long contexts.
+\newblock {\em Transactions of the Association for Computational Linguistics},
+  12\string:\penalty500\relax 157--173, 2024.
+
+\bibitem{liu2022_umt}
+Y.~\bgroup\fonteauteurs\bgroup Liu\egroup\egroup{},
+  S.~\bgroup\fonteauteurs\bgroup Li\egroup\egroup{},
+  Y.~\bgroup\fonteauteurs\bgroup Wu\egroup\egroup{}, C.~W.
+  \bgroup\fonteauteurs\bgroup Chen\egroup\egroup{},
+  Y.~\bgroup\fonteauteurs\bgroup Shan\egroup\egroup{} et
+  X.~\bgroup\fonteauteurs\bgroup Qie\egroup\egroup{} :
+\newblock Umt: Unified multi-modal transformers for joint video moment
+  retrieval and highlight detection.
+\newblock \emph{In} {\em Proceedings of the IEEE/CVF Conference on Computer
+  Vision and Pattern Recognition}, pages 3032--3041, 2022.
+
+\bibitem{radford2023_whisper}
+A.~\bgroup\fonteauteurs\bgroup Radford\egroup\egroup{},
+  J.~\bgroup\fonteauteurs\bgroup Kim\egroup\egroup{},
+  T.~\bgroup\fonteauteurs\bgroup Xu\egroup\egroup{},
+  G.~\bgroup\fonteauteurs\bgroup Brockman\egroup\egroup{},
+  C.~\bgroup\fonteauteurs\bgroup McLeavey\egroup\egroup{} et
+  I.~\bgroup\fonteauteurs\bgroup Sutskever\egroup\egroup{} :
+\newblock Whisper: Robust speech recognition via large-scale weak supervision.
+\newblock \emph{In} {\em Proceedings of the International Conference on Machine
+  Learning}, pages 28492--28518, 2023.
+
+\bibitem{tang2023}
+Y.~\bgroup\fonteauteurs\bgroup Tang\egroup\egroup{},
+  J.~\bgroup\fonteauteurs\bgroup Bi\egroup\egroup{},
+  S.~\bgroup\fonteauteurs\bgroup Xu\egroup\egroup{},
+  L.~\bgroup\fonteauteurs\bgroup Song\egroup\egroup{},
+  S.~\bgroup\fonteauteurs\bgroup Liang\egroup\egroup{},
+  T.~\bgroup\fonteauteurs\bgroup Wang\egroup\egroup{},
+  D.~\bgroup\fonteauteurs\bgroup Zhang\egroup\egroup{},
+  J.~\bgroup\fonteauteurs\bgroup An\egroup\egroup{},
+  J.~\bgroup\fonteauteurs\bgroup Lin\egroup\egroup{},
+  R.~\bgroup\fonteauteurs\bgroup Zhu\egroup\egroup{},
+  A.~\bgroup\fonteauteurs\bgroup Vosoughi\egroup\egroup{},
+  C.~\bgroup\fonteauteurs\bgroup Huang\egroup\egroup{},
+  Z.~\bgroup\fonteauteurs\bgroup Zhang\egroup\egroup{},
+  F.~\bgroup\fonteauteurs\bgroup Zheng\egroup\egroup{},
+  J.~\bgroup\fonteauteurs\bgroup Zhang\egroup\egroup{},
+  P.~\bgroup\fonteauteurs\bgroup Luo\egroup\egroup{},
+  J.~\bgroup\fonteauteurs\bgroup Luo\egroup\egroup{} et
+  C.~\bgroup\fonteauteurs\bgroup Xu\egroup\egroup{} :
+\newblock Video understanding with large language models: A survey.
+\newblock {\em arXiv preprint}, arXiv:2312.17432, 2023.
+
+\bibitem{wadekar2024_evolution_of_multimodal_model_architectures}
+S.~N. \bgroup\fonteauteurs\bgroup Wadekar\egroup\egroup{},
+  A.~\bgroup\fonteauteurs\bgroup Chaurasia\egroup\egroup{},
+  A.~\bgroup\fonteauteurs\bgroup Chadha\egroup\egroup{} et
+  E.~\bgroup\fonteauteurs\bgroup Culurciello\egroup\egroup{} :
+\newblock The evolution of multimodal model architectures.
+\newblock {\em arXiv preprint arXiv:2405.17927}, 2024.
+
+\bibitem{weng2024}
+Y.~\bgroup\fonteauteurs\bgroup Weng\egroup\egroup{},
+  M.~\bgroup\fonteauteurs\bgroup Han\egroup\egroup{},
+  H.~\bgroup\fonteauteurs\bgroup He\egroup\egroup{},
+  X.~\bgroup\fonteauteurs\bgroup Chang\egroup\egroup{} et
+  B.~\bgroup\fonteauteurs\bgroup Zhuang\egroup\egroup{} :
+\newblock Longvlm: Efficient long video understanding via large language
+  models.
+\newblock \emph{In} {\em Proceedings of the European Conference on Computer
+  Vision}, 2024.
+
+\bibitem{xu2023}
+J.~\bgroup\fonteauteurs\bgroup Xu\egroup\egroup{},
+  C.~\bgroup\fonteauteurs\bgroup Lan\egroup\egroup{},
+  W.~\bgroup\fonteauteurs\bgroup Xie\egroup\egroup{},
+  X.~\bgroup\fonteauteurs\bgroup Chen\egroup\egroup{} et
+  Y.~\bgroup\fonteauteurs\bgroup Lu\egroup\egroup{} :
+\newblock Retrieval-based video language model for efficient long video
+  question answering.
+\newblock {\em arXiv preprint}, arXiv:2312.04931, 2023.
+
+\bibitem{xu2024}
+J.~\bgroup\fonteauteurs\bgroup Xu\egroup\egroup{},
+  C.~\bgroup\fonteauteurs\bgroup Lan\egroup\egroup{},
+  W.~\bgroup\fonteauteurs\bgroup Xie\egroup\egroup{},
+  X.~\bgroup\fonteauteurs\bgroup Chen\egroup\egroup{} et
+  Y.~\bgroup\fonteauteurs\bgroup Lu\egroup\egroup{} :
+\newblock Slot-vlm: Slowfast slots for video-language modeling.
+\newblock {\em arXiv preprint arXiv:2402.13088}, 2024.
+
+\bibitem{anonymous2023_videollama}
+H.~\bgroup\fonteauteurs\bgroup Zhang\egroup\egroup{},
+  X.~\bgroup\fonteauteurs\bgroup Li\egroup\egroup{} et
+  L.~\bgroup\fonteauteurs\bgroup Bing\egroup\egroup{} :
+\newblock Video-llama: An instruction-tuned audio-visual language model for
+  video understanding.
+\newblock \emph{In} {\em Proceedings of the Conference on Empirical Methods in
+  Natural Language Processing: System Demonstrations}, pages 543--553.
+  Association for Computational Linguistics, 2023.
+
+\bibitem{zhou2024}
+P.~\bgroup\fonteauteurs\bgroup Zhou\egroup\egroup{},
+  L.~\bgroup\fonteauteurs\bgroup Wang\egroup\egroup{},
+  Z.~\bgroup\fonteauteurs\bgroup Liu\egroup\egroup{},
+  Y.~\bgroup\fonteauteurs\bgroup Hao\egroup\egroup{},
+  P.~\bgroup\fonteauteurs\bgroup Hui\egroup\egroup{},
+  S.~\bgroup\fonteauteurs\bgroup Tarkoma\egroup\egroup{} et
+  J.~\bgroup\fonteauteurs\bgroup Kangasharju\egroup\egroup{} :
+\newblock A survey on generative ai and {LLM} for video generation,
+  understanding, and streaming.
+\newblock {\em arXiv preprint}, arXiv:2404.16038, 2024.
+
+\end{thebibliography}
